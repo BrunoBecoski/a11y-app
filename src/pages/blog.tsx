@@ -6,29 +6,16 @@ import LogoImg from "../assets/logo.svg";
 
 export function Blog() {
   return (
-    <div>
-      <div className={styles.header}>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 8,
-            color: "#c4c4cc",
-          }}
-        >
-          <Image src={LogoImg} />
+    <>
+      <header aria-label="Cabeçalho">
+        <Image src={LogoImg} />
 
-          <div style={{ height: 28, width: 1, backgroundColor: "#9956f6" }} />
-
-          <span style={{ fontWeight: 600, fontSize: 18 }}>BLOG</span>
-        </div>
-
-        <div className={styles.nav}>
+        <nav className={styles.nav} aria-label="Navegação">
           <a href="https://www.github.com/BrunoBecoski" target="_blanc">
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 512 512"
               height="28"
               width="28"
@@ -40,35 +27,49 @@ export function Blog() {
               ></path>
             </svg>
           </a>
-        </div>
-      </div>
+        </nav>
+      </header>
 
-      <div className={styles.content}>
-        <h2>Desenvolvendo uma web acessível</h2>
-        <h4>
-          Protocolos e diretrizes orientam o desenvolvimento de tecnologias
-          acessíveis, mas é preciso olhar para além de tudo isso
-        </h4>
+      <main aria-label="Conteúdo">
+        <article className={styles.content}>
+          <header>
+            <h2>Desenvolvendo uma web acessível</h2>
+            <h4>
+              Protocolos e diretrizes orientam o desenvolvimento de tecnologias
+              acessíveis, mas é preciso olhar para além de tudo isso
+            </h4>
+          </header>
 
-        <p>
-          Acessibilidade se tornou uma tendência no ecossistema tecnológico
-          mundial, diversas empresas passaram a adotar critérios de
-          desenvolvimento acessível em seus projetos — por uma questão prática
-          ou por exigências legais —, no entanto, ainda faltam recursos e
-          consciência do que de fato é inclusivo na internet para pessoas com
-          deficiências.
-        </p>
-        <p>
-          Para abordar este tema, é preciso ter uma perspectiva cultural sobre o
-          assunto, não encará-lo apenas na ótica técnica ou prática.
-          Acessibilidade passou a ser vista como um desafio (ou tendência) para
-          o ecossistema tech e não como filosofia natural daquilo que condiz com
-          os princípios básicos da web: acessível para humanos. Tal afirmação
-          está na W3C.
-        </p>
+          <p>
+            Acessibilidade se tornou uma tendência no ecossistema tecnológico
+            mundial, diversas empresas passaram a adotar critérios de
+            desenvolvimento acessível em seus projetos — por uma questão prática
+            ou por exigências legais —, no entanto, ainda faltam recursos e
+            consciência do que de fato é inclusivo na internet para pessoas com
+            deficiências.
+          </p>
+          <p>
+            Para abordar este tema, é preciso ter uma perspectiva cultural sobre
+            o assunto, não encará-lo apenas na ótica técnica ou prática.
+            Acessibilidade passou a ser vista como um desafio (ou tendência)
+            para o ecossistema tech e não como filosofia natural daquilo que
+            condiz com os princípios básicos da web: acessível para humanos. Tal
+            afirmação está na W3C.
+          </p>
 
-        <h3>O que é acessibilidade, afinal?</h3>
-      </div>
-    </div>
+          <h3>O que é acessibilidade, afinal?</h3>
+        </article>
+      </main>
+
+      <footer>
+        <Image src={LogoImg} />
+
+        <nav className={styles.nav} aria-label="Rodapé">
+          <a href="/termo-de-uso" target="_blanc">
+            Termos de uso
+          </a>
+        </nav>
+      </footer>
+    </>
   );
 }
