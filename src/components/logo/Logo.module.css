@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: block;
+}
+
+.bar {
+  height: 2rem;
+  width: 0.125rem;
+  background-color: #9956f6;
+}
+
+.blog {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #ffffff;
+}
+
+.svg path {
+  fill: #ffffff;
+}
+
+@media (min-width: 1024px) {
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
