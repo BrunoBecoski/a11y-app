@@ -11,7 +11,7 @@ export function Logo() {
           xmlns="http://www.w3.org/2000/svg"
           className={styles.svg}
         >
-          <title>Rocketseat Blog</title>
+          <title>Blog da Rocketseat</title>
           <path
             d="M61.4004 14.6817C62.6218 13.6443 63.24 12.0699 63.24 10.0057C63.24 6.20468 61.0603 4.025 57.2592 4.025H44.855V21.9566H47.8453V7.01538H57.2592C59.4111 7.01538 60.2496 7.85388 60.2496 10.0057C60.2496 12.1576 59.4111 12.9961 57.2592 12.9961H51.1095L59.6207 21.9566H63.4732L57.8603 15.9673C59.3127 15.8753 60.502 15.4432 61.4004 14.6795V14.6817Z"
             fill="currentColor"
@@ -75,7 +75,7 @@ export function Logo() {
           xmlns="http://www.w3.org/2000/svg"
           className={styles.svg}
         >
-          <title>Rocketseat Blog</title>
+          <title>Blog da Rocketseat</title>
           <path
             d="M17.7212 19.0955C11.2549 24.6195 6.66309 25.0092 4.31153 22.6556C2.14483 20.4889 3.9418 15.0543 8.32091 9.68721L0 1.36829H5.31736L13.5826 9.63355C8.36663 14.8813 5.32531 20.469 6.89766 22.0414C8.19966 23.3454 12.2071 21.5385 16.5305 17.9048L17.7212 19.0955Z"
             fill="currentColor"

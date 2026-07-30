@@ -5,11 +5,15 @@ import { Logo } from "@/components/logo";
 export function Blog() {
   return (
     <>
-      <header aria-label="Cabeçalho">
+      <header className={styles.header} aria-label="Cabeçalho">
         <Logo />
 
         <nav className={styles.nav} aria-label="Navegação">
-          <a href="https://www.github.com/BrunoBecoski" target="_blanc">
+          <a
+            href="https://www.github.com/brunobecoski"
+            aria-label="Github"
+            target="_blanc"
+          >
             <svg
               stroke="currentColor"
               fill="currentColor"
@@ -60,7 +64,7 @@ export function Blog() {
         </article>
       </main>
 
-      <footer>
+      <footer className={styles.footer}>
         <Logo />
 
         <nav className={styles.nav} aria-label="Rodapé">
