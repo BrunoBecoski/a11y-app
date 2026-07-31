@@ -20,8 +20,6 @@
   margin: 0 auto;
 
   padding: 24px 20px;
-
-  color: #555555;
 }
 
 .content h2 {
@@ -34,7 +32,7 @@
 
 .footer {
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: space-between;
 
   max-width: calc(20px + 1024px + 20px);
@@ -42,4 +40,12 @@
   margin: 0 auto;
 
   padding: 24px 20px;
+}
+
+.footer a {
+  padding: 1rem 2rem;
+  background-color: #202024;
+  border-radius: 5px;
+
+  color: #996dff;
 }
