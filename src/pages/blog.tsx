@@ -36,11 +36,11 @@ export function Blog() {
       <main aria-label="Conteúdo">
         <article className={styles.content}>
           <header>
-            <h2>Desenvolvendo uma web acessível</h2>
-            <h4>
+            <h1>Desenvolvendo uma web acessível</h1>
+            <h2>
               Protocolos e diretrizes orientam o desenvolvimento de tecnologias
               acessíveis, mas é preciso olhar para além de tudo isso
-            </h4>
+            </h2>
           </header>
 
           <p>
