@@ -1,8 +1,17 @@
-import styles from "../styles/Blog.module.css";
+import { useState } from "react";
 
 import { Logo } from "@/components/logo";
+import { Modal } from "@/components/modal";
+
+import styles from "../styles/Blog.module.css";
 
 export function Blog() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  function handleModalOpen() {
+    setIsModalOpen(true);
+  }
+
   return (
     <>
       <header className={styles.header} aria-label="Cabeçalho">
@@ -68,11 +77,13 @@ export function Blog() {
         <Logo />
 
         <nav className={styles.nav} aria-label="Rodapé">
-          <a href="/termo-de-uso" target="_blanc">
+          <button type="button" onClick={handleModalOpen}>
             Termos de uso
-          </a>
+          </button>
         </nav>
       </footer>
+
+      {isModalOpen && <Modal />}
     </>
   );
 }
