@@ -1,24 +1,9 @@
-import { useEffect, useRef, useState } from "react";
-
 import { Logo } from "@/components/logo";
-import { Modal } from "@/components/modal";
+import { TermsOfUseModal } from "@/components/termsOfUseModal";
 
 import styles from "../styles/Blog.module.css";
 
 export function Blog() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const modalRef = useRef<HTMLDivElement>(null);
-
-  function handleModalOpen() {
-    setIsModalOpen(true);
-  }
-
-  useEffect(() => {
-    if (isModalOpen === true) {
-      modalRef?.current?.focus();
-    }
-  }, [isModalOpen]);
-
   return (
     <>
       <header className={styles.header} aria-label="Cabeçalho">
@@ -84,17 +69,9 @@ export function Blog() {
         <Logo />
 
         <nav className={styles.nav} aria-label="Rodapé">
-          <button
-            type="button"
-            onClick={handleModalOpen}
-            aria-controls="modal-1s"
-          >
-            Termos de uso
-          </button>
+          <TermsOfUseModal />
         </nav>
       </footer>
-
-      {isModalOpen && <Modal ref={modalRef} />}
     </>
   );
 }
