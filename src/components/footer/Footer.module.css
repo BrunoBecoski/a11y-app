@@ -1,0 +1,25 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: calc(20px + 1024px + 20px);
+  width: 100%;
+  margin: 0 auto;
+
+  padding: 24px 20px;
+}
+
+.footer button {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+
+  color: #996dff;
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+.footer button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
