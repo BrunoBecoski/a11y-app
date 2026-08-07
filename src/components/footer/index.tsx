@@ -1,16 +1,20 @@
-import { Logo } from "../logo";
-import { TermsOfUseModal } from "../termsOfUseModal";
+import { Logo } from "@/components/logo";
+import { TermsOfUseModal } from "@/components/termsOfUseModal";
 
 import styles from "./Footer.module.css";
 
 export function Footer() {
   return (
-    <footer className={styles.footer}>
-      <Logo />
+    <footer>
+      <div className={styles.content}>
+        <Logo />
 
-      <nav className={styles.nav} aria-label="Rodapé">
-        <TermsOfUseModal />
-      </nav>
+        <nav className={styles.nav} aria-label="Rodapé">
+          <TermsOfUseModal />
+        </nav>
+      </div>
+
+      <div className={styles.gradient} />
     </footer>
   );
 }

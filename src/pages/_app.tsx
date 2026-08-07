@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import type { AppProps } from "next/app";
 
 import { axeAccessibilityReport } from "@/utils/axeAccessibilityReporter";
+import Layout from "./layout";
+
 import "@/styles/globals.css";
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -9,5 +11,9 @@ export default function App({ Component, pageProps }: AppProps) {
     axeAccessibilityReport();
   }, []);
 
-  return <Component {...pageProps} />;
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }

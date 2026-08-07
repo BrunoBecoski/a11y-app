@@ -6,7 +6,9 @@ export function TermsOfUseModal() {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <button type="button">Termos de uso</button>
+        <button type="button" className={styles.openButton}>
+          Termos de uso
+        </button>
       </Dialog.Trigger>
 
       <Dialog.Portal>

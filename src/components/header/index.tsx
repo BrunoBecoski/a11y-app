@@ -1,17 +1,18 @@
-import { Logo } from "../logo";
+import { Logo } from "@/components/logo";
 
 import styles from "./Header.module.css";
 
 export function Header() {
   return (
-    <header className={styles.header} aria-label="Cabeçalho">
+    <header className={styles.container} aria-label="Cabeçalho">
       <Logo />
 
-      <nav className={styles.nav} aria-label="Navegação">
+      <nav aria-label="Navegação">
         <a
           href="https://www.github.com/brunobecoski"
           aria-label="Github"
           target="_blanc"
+          className={styles.link}
         >
           <svg
             stroke="currentColor"

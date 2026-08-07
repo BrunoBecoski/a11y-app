@@ -1,7 +1,7 @@
 import { Roboto } from "next/font/google";
 import Head from "next/head";
 
-import { Blog } from "./blog";
+import { Post } from "./post";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
 
       <div className={`${roboto.className}`}>
-        <Blog />
+        <Post />
       </div>
     </>
   );
