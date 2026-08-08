@@ -11,6 +11,7 @@ export default function Layout({ children }: LayoutProps) {
       <Header />
       <main aria-label="Conteúdo">{children}</main>
       <Footer />
+      <div className="gradient" />
     </>
   );
 }

@@ -1,5 +1,5 @@
 :root {
-  --background: #121214;
+  --background: #09090a;
   --color: #a8a8b3;
 
   --primary: #8234e9;
@@ -23,6 +23,15 @@ select {
 body {
   background-color: var(--background);
   color: var(--color);
-  display: flex;
-  flex-direction: column;
+}
+
+.gradient {
+  height: 4px;
+  background-image: linear-gradient(
+    95.99deg,
+    rgba(41, 224, 169, 0.7) 7.66%,
+    rgba(95, 117, 242, 0.7) 41.15%,
+    rgba(153, 86, 246, 0.7) 75.03%,
+    rgba(226, 84, 255, 0.7) 98.16%
+  );
 }

@@ -1,6 +1,10 @@
 import styles from "./Logo.module.css";
 
-export function Logo() {
+interface LogoProps {
+  withLabel?: boolean;
+}
+
+export function Logo({ withLabel = true }: LogoProps) {
   return (
     <div className={styles.container}>
       <div className={styles.desktop}>
@@ -87,9 +91,12 @@ export function Logo() {
         </svg>
       </div>
 
-      <div className={styles.bar} />
-
-      <span className={styles.blog}>BLOG</span>
+      {withLabel && (
+        <>
+          <div className={styles.bar} />
+          <span className={styles.blog}>BLOG</span>
+        </>
+      )}
     </div>
   );
 }
