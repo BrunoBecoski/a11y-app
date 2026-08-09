@@ -10,7 +10,9 @@ export function Footer() {
     });
   }
   return (
-    <footer aria-label="Rodapé">
+    <footer aria-label="Rodapé" className={styles.container}>
+      <div className={styles.line} />
+
       <div className={styles.content}>
         <Logo withLabel={false} />
 

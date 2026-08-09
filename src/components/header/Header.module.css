@@ -1,13 +1,14 @@
 .container {
+  background-color: #1a1a1e;
+}
+
+.content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  max-width: calc(20px + 1024px + 20px);
-  width: 100%;
+  max-width: var(--max-width);
+  padding-inline: var(--padding-inline);
   margin: 0 auto;
-
-  padding: 24px 20px;
-
-  background-color: #1a1a1e;
+  padding-block: 24px;
 }
