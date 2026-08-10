@@ -2,6 +2,11 @@
   background-color: #1a1a1e;
 }
 
+.logoSearch {
+  display: flex;
+  gap: 32px;
+}
+
 .content {
   display: flex;
   align-items: center;

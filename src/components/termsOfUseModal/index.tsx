@@ -1,6 +1,6 @@
 import * as Dialog from "@radix-ui/react-dialog";
 
-import styles from "./TermsOfUseModal.module.css";
+import styles from "./termsOfUseModal.module.css";
 
 export function TermsOfUseModal() {
   return (

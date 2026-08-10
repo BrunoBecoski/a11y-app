@@ -1,4 +1,4 @@
-import styles from "../styles/Post.module.css";
+import styles from "../styles/post.module.css";
 
 export function Post() {
   return (

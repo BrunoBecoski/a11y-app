@@ -1,14 +1,17 @@
 import { Logo } from "@/components/logo";
+import { SearchButton } from "@/components/searchButton";
 
-import styles from "./Header.module.css";
+import styles from "./header.module.css";
 
 export function Header() {
   return (
     <header className={styles.container} aria-label="Cabeçalho">
       <div className={styles.content}>
-        <Logo />
+        <div className={styles.logoSearch}>
+          <Logo />
 
-        <input placeholder="Buscar" />
+          <SearchButton />
+        </div>
 
         <div>
           <button type="button">

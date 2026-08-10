@@ -1,6 +1,6 @@
 import { Logo } from "@/components/logo";
 
-import styles from "./Footer.module.css";
+import styles from "./footer.module.css";
 
 export function Footer() {
   function handleScrollTop() {
