@@ -1,5 +1,5 @@
 import { Logo } from "@/components/logo";
-import { SearchButton } from "@/components/searchButton";
+import { SearchModal } from "@/components/searchModal";
 
 import styles from "./header.module.css";
 
@@ -7,10 +7,10 @@ export function Header() {
   return (
     <header className={styles.container} aria-label="Cabeçalho">
       <div className={styles.content}>
-        <div className={styles.logoSearch}>
+        <div className={styles.logoAndSearch}>
           <Logo />
 
-          <SearchButton />
+          <SearchModal />
         </div>
 
         <div>

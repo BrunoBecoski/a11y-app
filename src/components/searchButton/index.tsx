@@ -1,8 +1,11 @@
 import styles from "./searchButton.module.css";
 
-export function SearchButton() {
+interface SearchButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+
+export function SearchButton(props: SearchButtonProps) {
   return (
-    <button type="button" className={styles.container}>
+    <button type="button" className={styles.container} {...props}>
       <svg
         className={styles.icon}
         xmlns="http://www.w3.org/2000/svg"
