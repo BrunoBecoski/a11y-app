@@ -1,6 +1,7 @@
 import * as Dialog from "@radix-ui/react-dialog";
 
 import { SearchButton } from "@/components/searchButton";
+import { SearchInput } from "@/components/searchInput";
 import styles from "./searchModal.module.css";
 
 export function SearchModal() {
@@ -40,7 +41,7 @@ export function SearchModal() {
               Uma galáxia de conteúdos para te ajudar.
             </Dialog.Description>
 
-            <input placeholder="Palavra-chave..." />
+            <SearchInput />
 
             <div className={styles.categories}>
               <h2>Categorias</h2>
