@@ -1,0 +1,13 @@
+.container {
+}
+
+.container button {
+  cursor: pointer;
+}
+
+.container button[data-theme="dark"] {
+  background-color: black;
+}
+.container button[data-theme="light"] {
+  background-color: white;
+}
