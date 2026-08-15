@@ -4,20 +4,6 @@ import styles from "./themeButton.module.css";
 
 const icons = {
   dark: {
-    moon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
-        <title>Lua</title>
-        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
-      </svg>
-    ),
     sun: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -38,6 +24,20 @@ const icons = {
         <path d="M20 12h2"></path>
         <path d="m6.34 17.66-1.41 1.41"></path>
         <path d="m19.07 4.93-1.41 1.41"></path>
+      </svg>
+    ),
+    moon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        stroke="currentColor"
+        strokeWidth="2"
+      >
+        <title>Lua</title>
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
       </svg>
     ),
   },
@@ -97,21 +97,14 @@ export function ThemeButton() {
   }
 
   return (
-    <div className={styles.container}>
-      <button type="button" onClick={handleToggleTheme} data-theme={theme}>
-        {theme === "dark" && (
-          <>
-            <span>{icons.dark.sun}</span>
-            <span>{icons.dark.moon}</span>
-          </>
-        )}
-        {theme === "light" && (
-          <>
-            <span>{icons.light.sun}</span>
-            <span>{icons.light.moon}</span>
-          </>
-        )}
-      </button>
-    </div>
+    <button
+      type="button"
+      onClick={handleToggleTheme}
+      data-theme={theme}
+      className={styles.button}
+    >
+      <span className={styles.sun}>{icons[theme].sun}</span>
+      <span className={styles.moon}>{icons[theme].moon}</span>
+    </button>
   );
 }

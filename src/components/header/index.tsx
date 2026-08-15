@@ -10,10 +10,8 @@ export function Header() {
       <div className={styles.content}>
         <div className={styles.logoAndSearch}>
           <Logo />
-
           <SearchModal />
         </div>
-
         <ThemeButton />
       </div>
     </header>

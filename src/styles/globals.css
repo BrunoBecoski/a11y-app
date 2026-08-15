@@ -9,6 +9,20 @@
   --transition: all 300ms;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+  }
+}
+
+html.dark {
+  --background: #09090a;
+}
+
+html.light {
+  --background: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -1,13 +1,32 @@
-.container {
-}
-
-.container button {
+.button {
   cursor: pointer;
+  display: flex;
+  padding: 4px;
+  background-color: #202024;
+  border-radius: 12px;
 }
 
-.container button[data-theme="dark"] {
-  background-color: black;
+.button span {
+  padding-inline: 10px;
+  padding-block: 8px;
+  border-radius: 8px;
 }
-.container button[data-theme="light"] {
-  background-color: white;
+
+.button[data-theme="dark"] .sun {
+  background-color: transparent;
+  color: #7c7c8a;
+}
+.button[data-theme="dark"] .moon {
+  background-color: #8234e9;
+  color: #ffffff;
+}
+.button[data-theme="light"] .sun {
+  background-color: #8234e9;
+  color: #ffffff;
+}
+
+.button[data-theme="light"] .moon {
+  background-color: transparent;
+
+  color: #7c7c8a;
 }
