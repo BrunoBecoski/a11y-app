@@ -102,7 +102,9 @@ export function ThemeButton() {
       onClick={handleToggleTheme}
       data-theme={theme}
       className={styles.button}
+      title="Mudar o tema"
     >
+      <div className={styles.box} />
       <span className={styles.sun}>{icons[theme].sun}</span>
       <span className={styles.moon}>{icons[theme].moon}</span>
     </button>

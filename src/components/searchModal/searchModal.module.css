@@ -15,6 +15,7 @@
 }
 
 .openButton {
+  cursor: pointer;
   padding: 1rem 2rem;
   border-radius: 5px;
 
@@ -24,7 +25,6 @@
 }
 
 .openButton:hover {
-  cursor: pointer;
   text-decoration: underline;
 }
 
@@ -50,6 +50,7 @@
 }
 
 .closeButton {
+  cursor: pointer;
   padding: 8px;
   display: flex;
   align-items: center;
@@ -63,7 +64,6 @@
 }
 
 .closeButton:hover {
-  cursor: pointer;
   background-color: #202024;
 }
 
@@ -93,6 +93,7 @@
 }
 
 .categories button {
+  cursor: pointer;
   color: #8d8d99;
   background-color: #202024;
   transition: var(--transition);
@@ -105,6 +106,5 @@
 }
 
 .categories button:hover {
-  cursor: pointer;
   background-color: #29292e;
 }

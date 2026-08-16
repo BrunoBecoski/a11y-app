@@ -19,6 +19,7 @@
 }
 
 .button {
+  cursor: pointer;
   color: #c4c4cc;
   background: transparent;
   text-transform: uppercase;
@@ -34,6 +35,5 @@
 }
 
 .button:hover {
-  cursor: pointer;
   background-color: #121214;
 }

@@ -1,32 +1,49 @@
 .button {
   cursor: pointer;
   display: flex;
-  padding: 4px;
+  align-items: center;
+  justify-content: center;
   background-color: #202024;
-  border-radius: 12px;
+  border-radius: 6px;
+  padding: 4px;
+  position: relative;
+}
+
+.button:hover {
+  background-color: #29292e;
 }
 
 .button span {
-  padding-inline: 10px;
-  padding-block: 8px;
-  border-radius: 8px;
-}
-
-.button[data-theme="dark"] .sun {
-  background-color: transparent;
+  width: 36px;
+  height: 36px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #7c7c8a;
 }
+
 .button[data-theme="dark"] .moon {
-  background-color: #8234e9;
   color: #ffffff;
 }
 .button[data-theme="light"] .sun {
-  background-color: #8234e9;
   color: #ffffff;
 }
 
-.button[data-theme="light"] .moon {
-  background-color: transparent;
+.box {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background-color: #8234e9;
+  position: absolute;
 
-  color: #7c7c8a;
+  transition: var(--transition);
+}
+
+.button[data-theme="dark"] .box {
+  transform: translateX(50%);
+}
+
+.button[data-theme="light"] .box {
+  transform: translateX(-50%);
 }
