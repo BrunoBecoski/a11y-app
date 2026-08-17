@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import styles from "./themeButton.module.css";
 
@@ -72,7 +72,7 @@ const icons = {
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       >
         <title>Lua</title>
         <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
@@ -87,14 +87,38 @@ export function ThemeButton() {
   const [theme, setTheme] = useState<ThemeType>("dark");
 
   function handleToggleTheme() {
-    if (theme === "dark") {
-      setTheme("light");
+    const currentTheme = theme;
+    let nextTheme: ThemeType = "light";
+
+    if (currentTheme === "dark") {
+      nextTheme = "light";
     }
 
-    if (theme === "light") {
-      setTheme("dark");
+    if (currentTheme === "light") {
+      nextTheme = "dark";
     }
+
+    document.documentElement.classList.remove(currentTheme);
+    document.documentElement.classList.add(nextTheme);
+
+    setTheme(nextTheme);
   }
+
+  useEffect(() => {
+    const hasDarkClass = document.documentElement.classList.contains("dark");
+    const hasLightClass = document.documentElement.classList.contains("light");
+
+    if (hasDarkClass) {
+      setTheme("light");
+    } else if (hasLightClass) {
+      setTheme("dark");
+    } else {
+      const systemPrefersLight = window.matchMedia(
+        "(prefers-color-scheme: light)",
+      ).matches;
+      setTheme(systemPrefersLight ? "light" : "dark");
+    }
+  }, []);
 
   return (
     <button

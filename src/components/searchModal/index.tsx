@@ -26,7 +26,7 @@ export function SearchModal() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
+                  strokeWidth="2"
                 >
                   <title>x</title>
                   <path d="M18 6 6 18"></path>
