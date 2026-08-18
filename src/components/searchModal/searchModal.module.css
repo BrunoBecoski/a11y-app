@@ -8,24 +8,9 @@
 }
 
 .title {
-  font-size: 20px;
-  line-height: 28px;
+  font-size: var(--text-lg);
   color: #ffffff;
   font-weight: 600;
-}
-
-.openButton {
-  cursor: pointer;
-  padding: 1rem 2rem;
-  border-radius: 5px;
-
-  color: #996dff;
-  font-size: 1rem;
-  background-color: transparent;
-}
-
-.openButton:hover {
-  text-decoration: underline;
 }
 
 .overlay {
@@ -46,18 +31,17 @@
   background-color: #09090a;
 
   border: 1px solid #202024;
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
 }
 
 .closeButton {
-  cursor: pointer;
   padding: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
 
   background-color: transparent;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   color: #7c7c8a;
 
   transition: var(--transition);
@@ -74,13 +58,11 @@
 .description {
   color: #7c7c8a;
   margin-bottom: 16px;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: var(--text-md);
 }
 
 .categories h2 {
-  font-size: 20px;
-  line-height: 28px;
+  font-size: var(--text-lg);
   color: #ffffff;
   font-weight: 600;
   margin-bottom: 16px;
@@ -93,7 +75,6 @@
 }
 
 .categories button {
-  cursor: pointer;
   color: #8d8d99;
   background-color: #202024;
   transition: var(--transition);
@@ -102,7 +83,7 @@
   border: none;
   padding-block: 8px;
   padding-inline: 16px;
-  border-radius: 9999px;
+  border-radius: var(--radius-full);
 }
 
 .categories button:hover {

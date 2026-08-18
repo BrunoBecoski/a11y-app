@@ -4,7 +4,7 @@
 
 .logoAndSearch {
   display: flex;
-  gap: 32px;
+  gap: 2rem;
   width: 100%;
 }
 
@@ -15,5 +15,5 @@
   max-width: var(--max-width);
   padding-inline: var(--padding-inline);
   margin: 0 auto;
-  padding-block: 24px;
+  padding-block: 1.5rem;
 }
