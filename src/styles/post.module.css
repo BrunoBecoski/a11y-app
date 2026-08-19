@@ -4,11 +4,11 @@
   width: 100%;
   margin: 0 auto;
 
-  padding-block: 24px;
+  padding-block: 1.5rem;
 }
 
 .content h1 {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 
   font-size: var(--text-xl);
 }
@@ -17,5 +17,5 @@
 }
 
 .content p {
-  margin: 20px 0;
+  margin-block: 1.25rem;
 }

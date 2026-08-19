@@ -29,6 +29,22 @@
 
 html.dark {
   --background: #09090a;
+
+  /* --background: #29292e;
+  --background: #121214;
+  --background: #1a1a1e;
+  --background: #202024;
+  --background: #29292e;
+  --background: #121214;
+  --background: #29292e;
+  --background: #202024;
+  --background: #09090a; */
+
+  /* 
+  --color: #c4c4cc;
+  --color: #ffffff;
+  --color: #7c7c8a;
+  --color: #8d8d99; */
 }
 
 html.light {

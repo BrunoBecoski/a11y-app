@@ -15,7 +15,7 @@
 .bar {
   height: 2rem;
   width: 0.125rem;
-  background-color: #9956f6;
+  background-color: var(--primary);
 }
 
 .blog {
