@@ -21,11 +21,11 @@
 .blog {
   font-weight: 600;
   font-size: var(--text-xl);
-  color: #ffffff;
+  color: var(--color-title);
 }
 
 .svg path {
-  fill: #ffffff;
+  fill: var(--color-title);
 }
 
 @media (min-width: 1024px) {

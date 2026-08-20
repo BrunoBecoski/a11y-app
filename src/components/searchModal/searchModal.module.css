@@ -9,7 +9,7 @@
 
 .title {
   font-size: var(--text-lg);
-  color: #ffffff;
+  color: var(--color-title);
   font-weight: 600;
 }
 
@@ -28,7 +28,7 @@
   max-width: 670px;
   max-height: 85vh;
 
-  background-color: #09090a;
+  background-color: var(--color-modal);
 
   border: 0.125rem solid #202024;
   border-radius: var(--radius-xl);
@@ -63,7 +63,7 @@
 
 .categories h2 {
   font-size: var(--text-lg);
-  color: #ffffff;
+  color: var(--color-title);
   font-weight: 600;
   margin-bottom: 1rem;
 }

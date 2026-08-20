@@ -11,7 +11,7 @@
 .input {
   background: transparent;
   font-size: var(--text-md);
-  color: #ffffff;
+  color: var(--color-title);
   width: 100%;
 }
 

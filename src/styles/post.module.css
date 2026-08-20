@@ -11,11 +11,19 @@
   margin-bottom: 1.25rem;
 
   font-size: var(--text-xl);
+  color: var(--color-title);
 }
+
 .content h2 {
   font-size: var(--text-md);
+  color: var(--color-paragraph);
+}
+
+.content h3 {
+  color: var(--color-paragraph);
 }
 
 .content p {
   margin-block: 1.25rem;
+  color: var(--color-paragraph);
 }
