@@ -4,7 +4,7 @@
   align-items: center;
   padding: 1.5rem;
 
-  border-bottom: 0.125rem solid #202024;
+  border-bottom: 0.0625rem solid var(--background-button);
 }
 
 .title {
@@ -28,9 +28,9 @@
   max-width: 670px;
   max-height: 85vh;
 
-  background-color: var(--color-modal);
+  background-color: var(--background-modal);
 
-  border: 0.125rem solid #202024;
+  border: 0.0625rem solid var(--background-button);
   border-radius: var(--radius-xl);
 }
 
@@ -42,13 +42,13 @@
 
   background-color: transparent;
   border-radius: var(--radius-md);
-  color: #7c7c8a;
+  color: var(--color-title);
 
   transition: var(--transition);
 }
 
 .closeButton:hover {
-  background-color: #202024;
+  background-color: var(--background-button);
 }
 
 .descriptionAndInput {
@@ -56,7 +56,7 @@
 }
 
 .description {
-  color: #7c7c8a;
+  color: var(--color-paragraph);
   margin-bottom: 1rem;
   font-size: var(--text-md);
 }
@@ -75,8 +75,8 @@
 }
 
 .categories button {
-  color: #8d8d99;
-  background-color: #202024;
+  color: var(--color-paragraph);
+  background-color: var(--background-button);
   transition: var(--transition);
   text-transform: uppercase;
   font-weight: 700;
@@ -87,5 +87,5 @@
 }
 
 .categories button:hover {
-  background-color: #29292e;
+  filter: invert(10%);
 }

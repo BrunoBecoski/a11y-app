@@ -9,6 +9,7 @@
 
 .content h1 {
   margin-bottom: 1.25rem;
+  text-align: center;
 
   font-size: var(--text-xl);
   color: var(--color-title);
@@ -23,7 +24,16 @@
   color: var(--color-paragraph);
 }
 
-.content p {
+.content p,
+.content ul {
   margin-block: 1.25rem;
   color: var(--color-paragraph);
+}
+
+.content blockquote {
+  margin-block: 1.25rem;
+  color: var(--color-paragraph);
+  font-style: italic;
+  border-left: 0.25rem solid var(--primary);
+  padding: 0.857rem;
 }

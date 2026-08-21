@@ -1,9 +1,9 @@
 .container {
   position: relative;
-  background-color: #121214;
+  background-color: var(--background);
   padding-left: 1rem;
   padding-block: 0.875rem;
-  border: 0.125rem solid #29292e;
+  border: 0.0625rem solid var(--background-button);
   border-radius: var(--radius-lg);
   margin-bottom: 2rem;
 }
@@ -16,12 +16,12 @@
 }
 
 .input::placeholder {
-  color: #7c7c8a;
+  color: var(--color-label);
 }
 
 .span {
   font-size: var(--text-sm);
-  color: #7c7c8a;
+  color: var(--color-label);
   position: absolute;
   bottom: 0.75rem;
   right: 1rem;
