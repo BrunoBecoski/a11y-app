@@ -42,27 +42,6 @@ export function SearchModal() {
             </Dialog.Description>
 
             <SearchInput />
-
-            <div className={styles.categories}>
-              <h2>Categorias</h2>
-
-              <div>
-                <button type="button">python</button>
-                <button type="button">front-end</button>
-                <button type="button">java</button>
-                <button type="button">carreira</button>
-                <button type="button">php</button>
-                <button type="button">para empresas</button>
-                <button type="button">ia para devs</button>
-                <button type="button">javascript</button>
-                <button type="button">docker</button>
-                <button type="button">react</button>
-                <button type="button">node.js</button>
-                <button type="button">data analytics</button>
-                <button type="button">soft-skills</button>
-                <button type="button">teach lead</button>
-              </div>
-            </div>
           </div>
         </Dialog.Content>
       </Dialog.Portal>
