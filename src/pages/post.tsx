@@ -91,11 +91,8 @@ export function Post() {
       </p>
 
       <iframe
-        width="560"
-        height="315"
         src="https://www.youtube.com/embed/B_jepC7Eufo"
-        title="YouTube video player"
-        loading="lazy"
+        title="Acessibilidade no ecossistema de programação | Faladev #44"
         allowFullScreen
       ></iframe>
 
@@ -142,12 +139,229 @@ export function Post() {
       </p>
       <pre>
         <code>
-          {`body {
-              color: #222;
-              background-color: #f9f9f9;
-            }`}
+          {`
+body {
+  color: #222;
+  background-color: #f9f9f9;
+}
+          `}
         </code>
       </pre>
+
+      <h4>1.4. Design responsivo e zoom</h4>
+      <ol>
+        <li>Layout fluido:</li>
+        <ul>
+          <li>
+            Evitar uso de larguras fixas em pixels para o layout principal.
+            Prefira unidades relativas (%, rem, em) para que o conteúdo se
+            adapte ao zoom.
+          </li>
+          <li>
+            Para entender na prática a importância de unidades relativas (rem) e
+            espaçamentos fluídos em um footer, confira o vídeo abaixo:
+          </li>
+
+          <iframe
+            src="https://www.youtube.com/embed/dAdXLOAg4TM"
+            title="Responsividade e acessibilidade com Tailwind"
+            allowFullScreen
+          ></iframe>
+        </ul>
+
+        <li>Teste de zoom (200% ou mais):</li>
+        <ul>
+          <li>
+            Certificar-se de que, ao aplicar zoom, o layout não exige rolagem
+            horizontal contínua e que os elementos não fiquem sobrepostos.
+          </li>
+        </ul>
+        <li>Manter boa legibilidade:</li>
+        <ul>
+          <li>
+            Fontes devem ter tamanho mínimo recomendado (ex.: 16px padrão) e
+            permitir fácil escala com zoom.
+          </li>
+          <li>
+            Contraste e espaçamento devem ser pensados para que o conteúdo
+            continue legível mesmo em telas pequenas ou com zoom aumentado.
+          </li>
+        </ul>
+      </ol>
+
+      <h5>Exemplo rápido de CSS</h5>
+      <pre>
+        <code>
+          {`
+.container {
+  max-width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+            `}
+        </code>
+      </pre>
+
+      <ul>
+        <li>
+          Assim, quando aplicado zoom, o conteúdo se ajusta sem criar barras de
+          rolagem indesejadas.
+        </li>
+      </ul>
+
+      <h4>1.5. Estrutura da página</h4>
+      <p>
+        Organizar o conteúdo com cabeçalhos hierárquicos é uma prática essencial
+        para melhorar a experiência de navegação e garantir que leitores de tela
+        interpretem corretamente a estrutura da página. Use tags semânticas como{" "}
+        {`<main>`},{`<section>`}, {`<header>`} e {`<footer>`} para dar
+        significado aos elementos do seu site.
+      </p>
+      <p>Exemplo prático de organização hierárquica:</p>
+
+      <pre>
+        <code>
+          {`
+<main>
+  <h1>Cursos Rocketseat</h1>
+  <section>
+    <h2>Trilhas disponíveis</h2>
+    <ul>
+      <li>Ignite</li>
+      <li>Explorer</li>
+    </ul>
+  </section>
+</main>
+    `}
+        </code>
+      </pre>
+
+      <span>
+        📄 Para aprofundar seus conhecimentos sobre HTML Semântico e como ele
+        contribui para uma web mais acessível, recomendamos o artigo HTML
+        semântico: como criar uma web acessível no blog da Rocketseat.{" "}
+      </span>
+
+      <h3>2. Operável</h3>
+      <p>O site deve ser funcional para diferentes meios de navegação.</p>
+
+      <h4>2.1. Foco visível</h4>
+      <ul>
+        <li>Destaque o elemento em foco com estilos visuais:</li>
+      </ul>
+      <pre>
+        <code>
+          {`
+button:focus {
+  outline: 3px solid #8257e5;
+}
+    `}
+        </code>
+      </pre>
+      <h4>2.2. Atalhos de teclado</h4>
+      <ul>
+        <li>Adicione atalhos para facilitar o acesso a funcionalidades:</li>
+      </ul>
+      <pre>
+        <code>
+          {`
+<button accesskey="h">Home</button>
+    `}
+        </code>
+      </pre>
+
+      <h4>2.3. Ordem de tabulação</h4>
+      <ul>
+        <li>Certifique-se de que a navegação seja lógica:</li>
+      </ul>
+      <pre>
+        <code>
+          {`
+<a href="#inicio">Ir para o início</a>
+    `}
+        </code>
+      </pre>
+
+      <h4>2.4. Tempo limite</h4>
+      <ul>
+        <li>
+          Permita que usuários ajustem ou estendam o tempo para completar ações
+          importantes.
+        </li>
+        <li>
+          Se o site tiver formulários longos ou etapas de compra, garanta que
+          seja possível retomar a sessão ou revalidar dados sem perder todo o
+          progresso.
+        </li>
+      </ul>
+
+      <blockquote>
+        Assim como o tempo limite, outras medidas de usabilidade, como oferecer
+        um “Link de pular para o conteúdo”, são fundamentais para garantir a
+        navegabilidade por teclado ou leitor de tela. Ambas as técnicas fazem
+        parte do princípio de “Operável” na WCAG.
+      </blockquote>
+
+      <h4>2.5. Link de pular para o conteúdo (Skip to Main Content)</h4>
+      <ul>
+        <li>
+          Essa âncora deve ter uma classe (por exemplo, .skip-link) que
+          possibilita aplicar estilo para que fique visível apenas ao receber
+          foco (para não atrapalhar o layout).
+        </li>
+        <li>
+          Identifique o conteúdo principal:
+          <pre>
+            <code>
+              {`
+<main id="conteudo-principal">
+  <!-- Conteúdo principal do site -->
+</main>
+         `}
+            </code>
+          </pre>
+          <ul>
+            <li>
+              Garanta que o id no main seja o mesmo especificado no href do link
+              de pulo.
+            </li>
+          </ul>
+        </li>
+
+        <li>Estilize corretamente (opcional, mas recomendado):</li>
+        <pre>
+          <code>
+            {`
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  background: #f1f1f1;
+  padding: 8px;
+  font-size: 1rem;
+  color: #000;
+  z-index: 1000;
+}
+    `}
+          </code>
+        </pre>
+
+        <ul>
+          <li>
+            Isso fará com que o link apareça somente quando focado, mantendo o
+            design limpo, mas oferecendo acessibilidade para usuários que
+            navegam via teclado ou leitor de tela.
+          </li>
+        </ul>
+      </ul>
     </article>
   );
 }
