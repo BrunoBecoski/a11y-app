@@ -1,3 +1,7 @@
+.section {
+  display: flex;
+}
+
 .content {
   max-width: var(--max-width);
   padding-inline: var(--padding-inline);
