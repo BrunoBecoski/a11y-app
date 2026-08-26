@@ -3,12 +3,48 @@ import styles from "../styles/post.module.css";
 export function Post() {
   return (
     <section className={styles.section}>
-      <nav>
-        <a href="#por-que-a-acessibilidade-na-web-e-importante">
+      <nav className={styles.nav}>
+        <h2>Navegação Rápida</h2>
+
+        <a href="#por-que-a-acessibilidade">
+          <span>1</span>
           Por que a acessibilidade na web é importante?
         </a>
-        <a href="#conclusao">Conclusão</a>
+
+        <a href="#quem-se-beneficia">
+          <span>2</span>Quem se beneficia da acessibilidade?
+        </a>
+
+        <a href="#acessibilidade-na-pratica">
+          <span>3</span>
+          Acessibilidade na prática: impacto real no ecossistema de programação
+        </a>
+
+        <a href="#1-perceptivel">
+          <span>4</span>1. Perceptível
+        </a>
+
+        <a href="#2-operavel">
+          <span>5</span>2. Operável
+        </a>
+
+        <a href="#3-compreensivel">
+          <span>6</span>3. Compreensível
+        </a>
+
+        <a href="#4-robusto">
+          <span>7</span>4. Robusto
+        </a>
+
+        <a href="#ferramentas-uteis">
+          <span>8</span>Ferramentas úteis
+        </a>
+
+        <a href="#conclusao">
+          <span>9</span>Conclusão
+        </a>
       </nav>
+
       <article className={styles.content}>
         <h1>Crie experiências inclusivas: guia de acessibilidade na web</h1>
         <p>
@@ -20,7 +56,7 @@ export function Post() {
           front-end, adotar práticas acessíveis desde o início é uma forma de
           construir um ambiente digital mais justo e eficiente.
         </p>
-        <h2 id="por-que-a-acessibilidade-na-web-e-importante">
+        <h2 id="por-que-a-acessibilidade">
           Por que a acessibilidade na web é importante?
         </h2>
 
@@ -37,7 +73,7 @@ export function Post() {
           o som.
         </p>
 
-        <h2>Quem se beneficia da acessibilidade?</h2>
+        <h2 id="quem-se-beneficia">Quem se beneficia da acessibilidade?</h2>
 
         <ul>
           <li>
@@ -64,7 +100,7 @@ export function Post() {
           melhoramos o SEO e até mesmo nos alinhamos a leis de acessibilidade.
         </blockquote>
 
-        <h2>
+        <h2 id="acessibilidade-na-pratica">
           Acessibilidade na prática: impacto real no ecossistema de programação
         </h2>
 
@@ -109,7 +145,7 @@ export function Post() {
 
         <h2>Princípios básicos de acessibilidade (WCAG)</h2>
 
-        <h3>1. Perceptível</h3>
+        <h3 id="1-perceptivel">1. Perceptível</h3>
         <ul>
           <li>
             O conteúdo deve ser apresentado de forma clara, permitindo que todos
@@ -253,7 +289,7 @@ body {
           semântico: como criar uma web acessível no blog da Rocketseat.{" "}
         </span>
 
-        <h3>2. Operável</h3>
+        <h3 id="2-operavel">2. Operável</h3>
         <p>O site deve ser funcional para diferentes meios de navegação.</p>
 
         <h4>2.1. Foco visível</h4>
@@ -373,7 +409,7 @@ button:focus {
             </li>
           </ul>
         </ul>
-        <h3>Compreensível</h3>
+        <h3 id="3-compreensivel">3. Compreensível</h3>
         <p>
           O conteúdo e a navegação devem ser previsíveis e de fácil
           entendimento.
@@ -411,7 +447,7 @@ button:focus {
 `}</code>
         </pre>
 
-        <h3>4. Robusto</h3>
+        <h3 id="4-robusto">4. Robusto</h3>
         <p>
           O site deve ser compatível com diversas tecnologias e navegadores.
         </p>
@@ -449,7 +485,7 @@ button:focus {
           <li>Use ferramentas como o W3C Validator.</li>
         </ul>
 
-        <h3>Ferramentas úteis</h3>
+        <h3 id="ferramentas-uteis">Ferramentas úteis</h3>
 
         <ul>
           <li>

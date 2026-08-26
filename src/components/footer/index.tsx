@@ -6,8 +6,13 @@ export function Footer() {
   function handleScrollTop() {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
     });
+
+    window.history.pushState(
+      "",
+      document.title,
+      window.location.pathname + window.location.search,
+    );
   }
   return (
     <footer aria-label="Rodapé" className={styles.container}>
