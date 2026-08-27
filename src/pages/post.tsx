@@ -6,43 +6,67 @@ export function Post() {
       <nav className={styles.nav}>
         <h2>Navegação Rápida</h2>
 
-        <a href="#por-que-a-acessibilidade">
-          <span>1</span>
-          Por que a acessibilidade na web é importante?
-        </a>
-
-        <a href="#quem-se-beneficia">
-          <span>2</span>Quem se beneficia da acessibilidade?
-        </a>
-
-        <a href="#acessibilidade-na-pratica">
-          <span>3</span>
-          Acessibilidade na prática: impacto real no ecossistema de programação
-        </a>
-
-        <a href="#1-perceptivel">
-          <span>4</span>1. Perceptível
-        </a>
-
-        <a href="#2-operavel">
-          <span>5</span>2. Operável
-        </a>
-
-        <a href="#3-compreensivel">
-          <span>6</span>3. Compreensível
-        </a>
-
-        <a href="#4-robusto">
-          <span>7</span>4. Robusto
-        </a>
-
-        <a href="#ferramentas-uteis">
-          <span>8</span>Ferramentas úteis
-        </a>
-
-        <a href="#conclusao">
-          <span>9</span>Conclusão
-        </a>
+        <ul className={styles.list}>
+          <li>
+            <a href="#por-que-a-acessibilidade">
+              <span className={styles.number}>1</span>
+              <span className={styles.label}>
+                Por que a acessibilidade na web é importante?
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#quem-se-beneficia">
+              <span className={styles.number}>2</span>
+              <span>Quem se beneficia da acessibilidade?</span>
+            </a>
+          </li>
+          <li>
+            <a href="#acessibilidade-na-pratica">
+              <span className={styles.number}>3</span>
+              <span className={styles.label}>
+                Acessibilidade na prática: impacto real no ecossistema de
+                programação
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#1-perceptivel">
+              <span className={styles.number}>4</span>
+              <span className={styles.label}>1. Perceptível</span>
+            </a>
+          </li>
+          <li>
+            <a href="#2-operavel">
+              <span className={styles.number}>5</span>
+              <span className={styles.label}>2. Operável</span>
+            </a>
+          </li>
+          <li>
+            <a href="#3-compreensivel">
+              <span className={styles.number}>6</span>
+              <span className={styles.label}>3. Compreensível</span>
+            </a>
+          </li>
+          <li>
+            <a href="#4-robusto">
+              <span className={styles.number}>7</span>
+              <span className={styles.label}>4. Robusto</span>
+            </a>
+          </li>
+          <li>
+            <a href="#ferramentas-uteis">
+              <span className={styles.number}>8</span>
+              <span className={styles.label}>Ferramentas úteis</span>
+            </a>
+          </li>
+          <li>
+            <a href="#conclusao">
+              <span className={styles.number}>9</span>
+              <span className={styles.label}>Conclusão</span>
+            </a>
+          </li>
+        </ul>
       </nav>
 
       <article className={styles.content}>
