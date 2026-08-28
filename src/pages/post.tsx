@@ -18,7 +18,9 @@ export function Post() {
           <li>
             <a href="#quem-se-beneficia">
               <span className={styles.number}>2</span>
-              <span>Quem se beneficia da acessibilidade?</span>
+              <span className={styles.label}>
+                Quem se beneficia da acessibilidade?
+              </span>
             </a>
           </li>
           <li>
