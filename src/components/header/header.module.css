@@ -2,7 +2,9 @@
   background-color: var(--background-header);
   border-bottom: 0.0625rem solid var(--background-button);
   position: fixed;
+  height: 75px;
   width: 100%;
+  z-index: 10;
 }
 
 .logoAndSearch {
@@ -14,9 +16,9 @@
 .content {
   display: flex;
   align-items: center;
+  height: 100%;
 
   max-width: var(--max-width);
   padding-inline: var(--padding-inline);
   margin: 0 auto;
-  padding-block: 1.5rem;
 }

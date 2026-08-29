@@ -10,9 +10,9 @@ export function Post() {
           <li>
             <a href="#por-que-a-acessibilidade">
               <span className={styles.number}>1</span>
-              <span className={styles.label}>
+              <p className={styles.label}>
                 Por que a acessibilidade na web é importante?
-              </span>
+              </p>
             </a>
           </li>
           <li>
