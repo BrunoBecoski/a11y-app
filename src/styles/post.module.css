@@ -115,8 +115,18 @@
   scroll-behavior: smooth;
 }
 
+.content h4 {
+  color: var(--color-paragraph);
+}
+
+.content h5 {
+  color: var(--color-paragraph);
+}
+
 .content p,
-.content ul {
+.content span,
+.content ul,
+.content ol {
   margin-block: 1.25rem;
   color: var(--color-paragraph);
 }
@@ -127,4 +137,19 @@
   font-style: italic;
   border-left: 0.25rem solid var(--primary);
   padding: 0.857rem;
+}
+
+.content pre {
+  padding-inline: 1rem;
+  background-color: var(--background-code);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-sm);
+}
+
+.content code {
+  color: var(--color-paragraph);
+}
+
+.content ol {
+  color: var(--color-paragraph);
 }

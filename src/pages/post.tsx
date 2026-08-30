@@ -188,7 +188,9 @@ export function Post() {
         </ul>
         <pre>
           <code>
-            {`<img src="formacao.png" alt="Ilustração mostrando o fluxo de aprendizado na Rocketseat">`}
+            {`
+<img src="formacao.png" alt="Ilustração mostrando o fluxo de aprendizado na Rocketseat">
+            `}
           </code>
         </pre>
         <ul>
@@ -217,7 +219,7 @@ body {
   color: #222;
   background-color: #f9f9f9;
 }
-          `}
+            `}
           </code>
         </pre>
 
@@ -305,7 +307,7 @@ body {
     </ul>
   </section>
 </main>
-    `}
+            `}
           </code>
         </pre>
 
@@ -328,7 +330,7 @@ body {
 button:focus {
   outline: 3px solid #8257e5;
 }
-    `}
+          `}
           </code>
         </pre>
         <h4>2.2. Atalhos de teclado</h4>
@@ -339,7 +341,7 @@ button:focus {
           <code>
             {`
 <button accesskey="h">Home</button>
-    `}
+            `}
           </code>
         </pre>
 
@@ -351,7 +353,7 @@ button:focus {
           <code>
             {`
 <a href="#inicio">Ir para o início</a>
-    `}
+            `}
           </code>
         </pre>
 
@@ -390,7 +392,7 @@ button:focus {
 <main id="conteudo-principal">
   <!-- Conteúdo principal do site -->
 </main>
-         `}
+                `}
               </code>
             </pre>
             <ul>
@@ -413,6 +415,7 @@ button:focus {
   height: 1px;
   overflow: hidden;
 }
+
 .skip-link:focus {
   position: static;
   width: auto;
@@ -423,7 +426,7 @@ button:focus {
   color: #000;
   z-index: 1000;
 }
-    `}
+            `}
             </code>
           </pre>
 
@@ -446,9 +449,11 @@ button:focus {
         </ul>
 
         <pre>
-          <code>{`
+          <code>
+            {`
 <p>Digite seu e-mail no campo abaixo para receber atualizações.</p>
-`}</code>
+            `}
+          </code>
         </pre>
 
         <h4>3.2. Navegação consistente</h4>
@@ -466,11 +471,13 @@ button:focus {
           </li>
         </ul>
         <pre>
-          <code>{`
+          <code>
+            {`
 <label for="senha">Senha:</label>
 <input type="password" id="senha" required>
 <span role="alert">A senha deve conter ao menos 8 caracteres.</span>
-`}</code>
+            `}
+          </code>
         </pre>
 
         <h3 id="4-robusto">4. Robusto</h3>

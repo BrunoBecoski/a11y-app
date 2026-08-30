@@ -5,6 +5,7 @@
   --background-footer: #09090a;
   --background-button: #202024;
   --background-nav: #202024;
+  --background-code: #1e1e1e;
 
   --color-title: #e1e1e6;
   --color-paragraph: #f5f5f4;
@@ -37,6 +38,7 @@
     --background-footer: #ffffff;
     --background-button: #c4c4cc;
     --background-nav: #ffffff;
+    --background-code: #f5f2f0;
 
     --color-title: #121214;
     --color-paragraph: #333333;
@@ -51,6 +53,7 @@ html.dark {
   --background-footer: #09090a;
   --background-button: #202024;
   --background-nav: #202024;
+  --background-code: #1e1e1e;
 
   --color-title: #e1e1e6;
   --color-paragraph: #f5f5f4;
@@ -64,6 +67,7 @@ html.light {
   --background-footer: #ffffff;
   --background-button: #c4c4cc;
   --background-nav: #ffffff;
+  --background-code: #f5f2f0;
 
   --color-title: #121214;
   --color-paragraph: #333333;
