@@ -21,6 +21,7 @@
   --text-md: 1rem; /* 16px */
   --text-lg: 1.25rem; /* 20px */
   --text-xl: 1.5rem; /* 24px */
+  --text-2xl: 3rem; /* 48px */
 
   --radius-xs: 0.25rem; /* 4px */
   --radius-sm: 0.375rem; /* 6px */

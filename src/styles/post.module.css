@@ -87,9 +87,9 @@
 }
 
 .content {
-  max-width: var(--max-width);
   padding-inline: var(--padding-inline);
   width: 100%;
+  max-width: 768px;
   margin: 0 auto;
   margin-top: 100px;
   margin-left: 1rem;
@@ -101,12 +101,12 @@
   margin-bottom: 1.25rem;
   text-align: center;
 
-  font-size: var(--text-xl);
+  font-size: var(--text-2xl);
   color: var(--color-title);
 }
 
 .content h2 {
-  font-size: var(--text-md);
+  font-size: var(--text-xl);
   color: var(--color-paragraph);
 }
 
@@ -129,6 +129,11 @@
 .content ol {
   margin-block: 1.25rem;
   color: var(--color-paragraph);
+  line-height: 1.5rem;
+}
+
+.content li {
+  margin-left: 1rem;
 }
 
 .content blockquote {
