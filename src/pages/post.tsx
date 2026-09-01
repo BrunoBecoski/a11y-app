@@ -72,6 +72,20 @@ export function Post() {
       </nav>
 
       <article className={styles.content}>
+        <div className={styles.tags}>
+          <a href="/acessibilidade">Acessibilidade</a>
+          <a href="/acessibilidade-na-web">Acessibilidade na Web</a>
+          <a href="/como-tornar-sites-acessiveis">
+            Como tornar sites acessíveis
+          </a>
+          <a href="/boas-praticas-de-acessibilidade">
+            Boas práticas de acessibilidade
+          </a>
+          <a href="/desenvolvimento-web-acessivel">
+            Desenvolvimento web acessível
+          </a>
+        </div>
+
         <h1>Crie experiências inclusivas: guia de acessibilidade na web</h1>
         <p>
           Em um mundo onde a web é essencial para tantas atividades do dia a

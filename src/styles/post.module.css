@@ -86,6 +86,31 @@
   }
 }
 
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tags a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  color: var(--color-label);
+  background-color: var(--background-button);
+  padding-inline: 0.5rem;
+  padding-block: 0.25rem;
+  border-radius: var(--radius-full);
+
+  transition: var(--transition);
+}
+
+.tags a:hover {
+  filter: brightness(var(--brightness));
+}
+
 .content {
   padding-inline: var(--padding-inline);
   width: 100%;

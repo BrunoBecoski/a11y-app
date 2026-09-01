@@ -16,7 +16,9 @@
   --max-width: 1256px;
   --padding-inline: 20px;
   --transition: all 300ms;
+  --brightness: 120%;
 
+  --text-xs: 0.75rem; /* 12px */
   --text-sm: 0.875rem; /* 14px */
   --text-md: 1rem; /* 16px */
   --text-lg: 1.25rem; /* 20px */
