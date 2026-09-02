@@ -18,6 +18,9 @@
   --transition: all 300ms;
   --brightness: 120%;
 
+  --header-height: 75px;
+  --footer-height: 100px;
+
   --text-xs: 0.75rem; /* 12px */
   --text-sm: 0.875rem; /* 14px */
   --text-md: 1rem; /* 16px */

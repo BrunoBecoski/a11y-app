@@ -1,28 +1,123 @@
 .section {
   display: flex;
+  flex-direction: column;
   max-width: 1600px;
   margin-inline: auto;
 }
 
-.nav {
+.header {
+  margin-top: var(--header-height);
+  text-align: center;
+  max-width: 768px;
+  margin-inline: auto;
+  padding-block: 4rem;
+  padding-inline: 1.5rem;
+}
+
+.header h1 {
+  margin-bottom: 1.25rem;
+  text-align: center;
+  font-size: var(--text-2xl);
+  color: var(--color-title);
+}
+
+.tags {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tags a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  color: var(--color-label);
+  background-color: var(--background-button);
+  padding-inline: 0.5rem;
+  padding-block: 0.25rem;
+  border-radius: var(--radius-full);
+
+  transition: var(--transition);
+}
+
+.tags a:hover {
+  filter: brightness(var(--brightness));
+}
+
+.content {
+  /* padding-inline: var(--padding-inline); */
+  /* width: 100%; */
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.content h2 {
+  font-size: var(--text-xl);
+  color: var(--color-paragraph);
+}
+
+.content h3 {
+  color: var(--color-paragraph);
+  scroll-behavior: smooth;
+}
+
+.content h4 {
+  color: var(--color-paragraph);
+}
+
+.content h5 {
+  color: var(--color-paragraph);
+}
+
+.content p,
+.content span,
+.content ul,
+.content ol {
+  margin-block: 1.25rem;
+  color: var(--color-paragraph);
+  line-height: 1.5rem;
+}
+
+.content li {
+  margin-left: 1rem;
+}
+
+.content blockquote {
+  margin-block: 1.25rem;
+  color: var(--color-paragraph);
+  font-style: italic;
+  border-left: 0.25rem solid var(--primary);
+  padding: 0.857rem;
+}
+
+.content pre {
+  padding-inline: 1rem;
+  background-color: var(--background-code);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-sm);
+}
+
+.content code {
+  color: var(--color-paragraph);
+}
+
+.content ol {
+  color: var(--color-paragraph);
+}
+
+.nav {
   width: 280px;
-  max-height: 550px;
-  height: calc(100vh - 75px);
+  height: calc(100vh - var(--header-height) - 2rem);
   border-radius: var(--radius-lg);
-
   border: 0.0625rem solid var(--background-button);
-  border-left: none;
   padding: 1.25rem;
-  position: sticky;
-
-  margin-block: 1rem;
-
-  top: calc(75px + 1rem);
-  bottom: -105px;
-
   background-color: var(--background-nav);
+  position: sticky;
+  top: calc(var(--header-height) + 1rem);
+  transform: translateX(-100%);
+  margin-bottom: 1rem;
 }
 
 .nav h2 {
@@ -84,102 +179,4 @@
   .nav {
     display: none;
   }
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.tags a {
-  text-decoration: none;
-  font-weight: 700;
-  font-size: var(--text-xs);
-  text-transform: uppercase;
-  color: var(--color-label);
-  background-color: var(--background-button);
-  padding-inline: 0.5rem;
-  padding-block: 0.25rem;
-  border-radius: var(--radius-full);
-
-  transition: var(--transition);
-}
-
-.tags a:hover {
-  filter: brightness(var(--brightness));
-}
-
-.content {
-  padding-inline: var(--padding-inline);
-  width: 100%;
-  max-width: 768px;
-  margin: 0 auto;
-  margin-top: 100px;
-  margin-left: 1rem;
-
-  padding-block: 1.5rem;
-}
-
-.content h1 {
-  margin-bottom: 1.25rem;
-  text-align: center;
-
-  font-size: var(--text-2xl);
-  color: var(--color-title);
-}
-
-.content h2 {
-  font-size: var(--text-xl);
-  color: var(--color-paragraph);
-}
-
-.content h3 {
-  color: var(--color-paragraph);
-  scroll-behavior: smooth;
-}
-
-.content h4 {
-  color: var(--color-paragraph);
-}
-
-.content h5 {
-  color: var(--color-paragraph);
-}
-
-.content p,
-.content span,
-.content ul,
-.content ol {
-  margin-block: 1.25rem;
-  color: var(--color-paragraph);
-  line-height: 1.5rem;
-}
-
-.content li {
-  margin-left: 1rem;
-}
-
-.content blockquote {
-  margin-block: 1.25rem;
-  color: var(--color-paragraph);
-  font-style: italic;
-  border-left: 0.25rem solid var(--primary);
-  padding: 0.857rem;
-}
-
-.content pre {
-  padding-inline: 1rem;
-  background-color: var(--background-code);
-  border: 1px solid var(--primary);
-  border-radius: var(--radius-sm);
-}
-
-.content code {
-  color: var(--color-paragraph);
-}
-
-.content ol {
-  color: var(--color-paragraph);
 }
