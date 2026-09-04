@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import styles from "../styles/post.module.css";
 
 export function Post() {
@@ -19,6 +21,8 @@ export function Post() {
         </div>
 
         <h1>Crie experiências inclusivas: guia de acessibilidade na web</h1>
+
+        <Image src="/html-css.avif" alt="html-css" width={1120} height={502} />
       </div>
 
       <article className={styles.article}>
@@ -251,8 +255,8 @@ export function Post() {
 body {
   color: #222;
   background-color: #f9f9f9;
-  }
-  `}
+}
+                `}
               </code>
             </pre>
 
@@ -308,8 +312,8 @@ body {
   max-width: 100%;
   padding: 1rem;
   box-sizing: border-box;
-  }
-  `}
+}
+                `}
               </code>
             </pre>
 
@@ -351,7 +355,7 @@ body {
               📄 Para aprofundar seus conhecimentos sobre HTML Semântico e como
               ele contribui para uma web mais acessível, recomendamos o artigo
               HTML semântico: como criar uma web acessível no blog da
-              Rocketseat.{" "}
+              Rocketseat.
             </span>
           </div>
 
@@ -369,7 +373,7 @@ body {
 button:focus {
   outline: 3px solid #8257e5;
 }
-          `}
+                `}
               </code>
             </pre>
             <h4>2.2. Atalhos de teclado</h4>
@@ -382,7 +386,7 @@ button:focus {
               <code>
                 {`
 <button accesskey="h">Home</button>
-            `}
+                `}
               </code>
             </pre>
 
@@ -394,7 +398,7 @@ button:focus {
               <code>
                 {`
 <a href="#inicio">Ir para o início</a>
-            `}
+                `}
               </code>
             </pre>
 
@@ -433,7 +437,7 @@ button:focus {
 <main id="conteudo-principal">
   <!-- Conteúdo principal do site -->
 </main>
-                `}
+                    `}
                   </code>
                 </pre>
                 <ul>
@@ -467,7 +471,7 @@ button:focus {
   color: #000;
   z-index: 1000;
 }
-            `}
+                  `}
                 </code>
               </pre>
 
@@ -496,7 +500,7 @@ button:focus {
               <code>
                 {`
 <p>Digite seu e-mail no campo abaixo para receber atualizações.</p>
-            `}
+                `}
               </code>
             </pre>
 
@@ -520,7 +524,7 @@ button:focus {
 <label for="senha">Senha:</label>
 <input type="password" id="senha" required>
 <span role="alert">A senha deve conter ao menos 8 caracteres.</span>
-            `}
+                `}
               </code>
             </pre>
           </div>
