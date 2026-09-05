@@ -1,8 +1,49 @@
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 import styles from "../styles/post.module.css";
 
 export function Post() {
+  const [activeSction, setActiveSection] = useState("acessibilidade");
+
+  const sectionsRef = useRef(new Map());
+
+  function handleNavigateTo(id: string) {
+    const element = sectionsRef.current.get(id);
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+
+  useEffect(() => {
+    const sectionsMap = Array.from(sectionsRef.current.values());
+
+    const options = {
+      root: null,
+      rootMargin: "-20px 0px -60px 0px",
+      threshold: 0,
+    };
+
+    const callback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersectiong) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    sectionsMap.forEach((element) => {
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className={styles.section}>
       <div className={styles.header}>
@@ -31,65 +72,92 @@ export function Post() {
 
           <ul className={styles.list}>
             <li>
-              <a href="#por-que-a-acessibilidade">
+              <button
+                type="button"
+                onClick={() => handleNavigateTo("por-que-a-acessibilidade")}
+              >
                 <span className={styles.number}>1</span>
                 <span className={styles.label}>
                   Por que a acessibilidade na web é importante?
                 </span>
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#quem-se-beneficia">
+              <button
+                type="button"
+                onClick={() => handleNavigateTo("quem-se-beneficia")}
+              >
                 <span className={styles.number}>2</span>
                 <span className={styles.label}>
                   Quem se beneficia da acessibilidade?
                 </span>
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#acessibilidade-na-pratica">
+              <button
+                type="button"
+                onClick={() => handleNavigateTo("acessibilidade-na-pratica")}
+              >
                 <span className={styles.number}>3</span>
                 <span className={styles.label}>
                   Acessibilidade na prática: impacto real no ecossistema de
                   programação
                 </span>
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#1-perceptivel">
+              <button
+                type="button"
+                onClick={() => handleNavigateTo("1-perceptivel")}
+              >
                 <span className={styles.number}>4</span>
                 <span className={styles.label}>1. Perceptível</span>
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#2-operavel">
+              <button
+                type="button"
+                onClick={() => handleNavigateTo("2-operavel")}
+              >
                 <span className={styles.number}>5</span>
                 <span className={styles.label}>2. Operável</span>
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#3-compreensivel">
+              <button
+                type="button"
+                onClick={() => handleNavigateTo("3-compreensivel")}
+              >
                 <span className={styles.number}>6</span>
                 <span className={styles.label}>3. Compreensível</span>
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#4-robusto">
+              <button
+                type="button"
+                onClick={() => handleNavigateTo("4-robusto")}
+              >
                 <span className={styles.number}>7</span>
                 <span className={styles.label}>4. Robusto</span>
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#ferramentas-uteis">
+              <button
+                type="button"
+                onClick={() => handleNavigateTo("ferramentas-uteis")}
+              >
                 <span className={styles.number}>8</span>
                 <span className={styles.label}>Ferramentas úteis</span>
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#conclusao">
+              <button
+                type="button"
+                onClick={() => handleNavigateTo("conclusao")}
+              >
                 <span className={styles.number}>9</span>
                 <span className={styles.label}>Conclusão</span>
-              </a>
+              </button>
             </li>
           </ul>
         </nav>
@@ -108,7 +176,13 @@ export function Post() {
             </p>
           </div>
 
-          <div>
+          <div
+            ref={(node) =>
+              node
+                ? sectionsRef.current.set("por-que-a-acessibilidade", node)
+                : sectionsRef.current.delete("por-que-a-acessibilidade")
+            }
+          >
             <h2 id="por-que-a-acessibilidade">
               Por que a acessibilidade na web é importante?
             </h2>
@@ -127,7 +201,13 @@ export function Post() {
             </p>
           </div>
 
-          <div>
+          <div
+            ref={(node) =>
+              node
+                ? sectionsRef.current.set("quem-se-beneficia", node)
+                : sectionsRef.current.delete("quem-se-beneficia")
+            }
+          >
             <h2 id="quem-se-beneficia">Quem se beneficia da acessibilidade?</h2>
             <ul>
               <li>
@@ -156,7 +236,13 @@ export function Post() {
             </blockquote>
           </div>
 
-          <div>
+          <div
+            ref={(node) =>
+              node
+                ? sectionsRef.current.set("acessibilidade-na-pratica", node)
+                : sectionsRef.current.delete("acessibilidade-na-pratica")
+            }
+          >
             <h2 id="acessibilidade-na-pratica">
               Acessibilidade na prática: impacto real no ecossistema de
               programação
@@ -205,7 +291,13 @@ export function Post() {
 
           <h2>Princípios básicos de acessibilidade (WCAG)</h2>
 
-          <div>
+          <div
+            ref={(node) =>
+              node
+                ? sectionsRef.current.set("1-perceptivel", node)
+                : sectionsRef.current.delete("1-perceptivel")
+            }
+          >
             <h3 id="1-perceptivel">1. Perceptível</h3>
             <ul>
               <li>
@@ -359,7 +451,13 @@ body {
             </span>
           </div>
 
-          <div>
+          <div
+            ref={(node) =>
+              node
+                ? sectionsRef.current.set("2-operavel", node)
+                : sectionsRef.current.delete("2-operavel")
+            }
+          >
             <h3 id="2-operavel">2. Operável</h3>
             <p>O site deve ser funcional para diferentes meios de navegação.</p>
 
@@ -485,7 +583,13 @@ button:focus {
             </ul>
           </div>
 
-          <div>
+          <div
+            ref={(node) =>
+              node
+                ? sectionsRef.current.set("3-compreensivel", node)
+                : sectionsRef.current.delete("3-compreensivel")
+            }
+          >
             <h3 id="3-compreensivel">3. Compreensível</h3>
             <p>
               O conteúdo e a navegação devem ser previsíveis e de fácil
@@ -529,7 +633,13 @@ button:focus {
             </pre>
           </div>
 
-          <div>
+          <div
+            ref={(node) =>
+              node
+                ? sectionsRef.current.set("4-robusto", node)
+                : sectionsRef.current.delete("4-robusto")
+            }
+          >
             <h3 id="4-robusto">4. Robusto</h3>
             <p>
               O site deve ser compatível com diversas tecnologias e navegadores.
@@ -570,7 +680,13 @@ button:focus {
             </ul>
           </div>
 
-          <div>
+          <div
+            ref={(node) =>
+              node
+                ? sectionsRef.current.set("ferramentas-uteis", node)
+                : sectionsRef.current.delete("ferramentas-uteis")
+            }
+          >
             <h3 id="ferramentas-uteis">Ferramentas úteis</h3>
 
             <ul>
@@ -608,7 +724,13 @@ button:focus {
             </ul>
           </div>
 
-          <div>
+          <div
+            ref={(node) =>
+              node
+                ? sectionsRef.current.set("conclusao", node)
+                : sectionsRef.current.delete("conclusao")
+            }
+          >
             <h3 id="conclusao">Conclusão</h3>
 
             <p>
