@@ -47,21 +47,45 @@ export function Post() {
   return (
     <section className={styles.section}>
       <div className={styles.header}>
-        <div className={styles.tags}>
-          <a href="/acessibilidade">Acessibilidade</a>
-          <a href="/acessibilidade-na-web">Acessibilidade na Web</a>
-          <a href="/como-tornar-sites-acessiveis">
-            Como tornar sites acessíveis
-          </a>
-          <a href="/boas-praticas-de-acessibilidade">
-            Boas práticas de acessibilidade
-          </a>
-          <a href="/desenvolvimento-web-acessivel">
-            Desenvolvimento web acessível
-          </a>
-        </div>
+        <div className={styles.title}>
+          <div className={styles.tags}>
+            <a href="/acessibilidade">Acessibilidade</a>
+            <a href="/acessibilidade-na-web">Acessibilidade na Web</a>
+            <a href="/como-tornar-sites-acessiveis">
+              Como tornar sites acessíveis
+            </a>
+            <a href="/boas-praticas-de-acessibilidade">
+              Boas práticas de acessibilidade
+            </a>
+            <a href="/desenvolvimento-web-acessivel">
+              Desenvolvimento web acessível
+            </a>
+          </div>
 
-        <h1>Crie experiências inclusivas: guia de acessibilidade na web</h1>
+          <h1>Crie experiências inclusivas: guia de acessibilidade na web</h1>
+
+          <div className={styles.info}>
+            <svg
+              height="25"
+              width="34"
+              viewBox="0 0 34 25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Blog da Rocketseat</title>
+              <path
+                d="M17.7212 19.0955C11.2549 24.6195 6.66309 25.0092 4.31153 22.6556C2.14483 20.4889 3.9418 15.0543 8.32091 9.68721L0 1.36829H5.31736L13.5826 9.63355C8.36663 14.8813 5.32531 20.469 6.89766 22.0414C8.19966 23.3454 12.2071 21.5385 16.5305 17.9048L17.7212 19.0955Z"
+                fill="currentColor"
+              ></path>
+              <path
+                d="M32.8901 23.6315H27.5727L19.3075 15.3663C24.5234 10.1205 27.5648 4.53079 25.9944 2.96043C24.6924 1.65644 20.681 3.46533 16.3576 7.09903L15.1669 5.90834C21.6352 0.382265 26.229 -0.00934154 28.5805 2.34421C30.7472 4.51091 28.9522 9.94555 24.5711 15.3126L32.892 23.6315H32.8901Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+            <strong>Rocketseat</strong>
+            <div />
+            <span>5 min de leitura</span>
+          </div>
+        </div>
 
         <Image src="/html-css.avif" alt="html-css" width={1120} height={502} />
       </div>

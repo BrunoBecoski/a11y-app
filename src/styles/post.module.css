@@ -6,15 +6,49 @@
 }
 
 .header {
-  margin-top: var(--header-height);
-  text-align: center;
+  max-width: var(--max-width);
   margin-inline: auto;
   padding-block: 4rem;
-  padding-inline: 1.5rem;
 }
 
-.header h1 {
-  text-align: center;
+.info {
+  margin-top: 1rem;
+  height: 2.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.info svg {
+  color: var(--color-title);
+}
+
+.info strong {
+  color: var(--color-title);
+}
+
+.info span {
+  font-size: var(--text-md);
+  color: var(--color-label);
+}
+
+.info div {
+  width: 2px;
+  height: 28px;
+  background-color: var(--primary);
+}
+
+.title {
+  margin-top: var(--header-height);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  max-width: 768px;
+}
+
+.title h1 {
+  text-align: left;
   font-size: var(--text-2xl);
   color: var(--color-title);
   max-width: 768px;
