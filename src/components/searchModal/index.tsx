@@ -14,8 +14,8 @@ export function SearchModal() {
       <Dialog.Portal>
         <Dialog.Overlay className={styles.overlay} />
 
-        <Dialog.Content className={styles.content}>
-          <div className={styles.titleAndClose}>
+        <Dialog.Content className={styles.modal}>
+          <div className={styles.header}>
             <Dialog.Title className={styles.title}>Buscar artigos</Dialog.Title>
             <Dialog.Close asChild>
               <button type="button" className={styles.closeButton}>
@@ -36,12 +36,30 @@ export function SearchModal() {
             </Dialog.Close>
           </div>
 
-          <div className={styles.descriptionAndInput}>
+          <div className={styles.content}>
             <Dialog.Description className={styles.description}>
               Uma galáxia de conteúdos para te ajudar.
             </Dialog.Description>
 
             <SearchInput />
+
+            <div className={styles.categories}>
+              <h3>Categorias</h3>
+
+              <div>
+                <a href="/acessibilidade">Acessibilidade</a>
+                <a href="/acessibilidade-na-web">Acessibilidade na Web</a>
+                <a href="/como-tornar-sites-acessiveis">
+                  Como tornar sites acessíveis
+                </a>
+                <a href="/boas-praticas-de-acessibilidade">
+                  Boas práticas de acessibilidade
+                </a>
+                <a href="/desenvolvimento-web-acessivel">
+                  Desenvolvimento web acessível
+                </a>
+              </div>
+            </div>
           </div>
         </Dialog.Content>
       </Dialog.Portal>
