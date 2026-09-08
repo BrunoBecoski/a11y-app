@@ -60,9 +60,6 @@
   margin-bottom: 1rem;
   font-size: var(--text-md);
 }
-.categories {
-}
-
 .categories h3 {
   color: var(--color-title);
   font-size: var(--text-lg);

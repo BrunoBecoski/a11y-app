@@ -10,6 +10,8 @@
   width: 100%;
   height: 0.0625rem;
   background-color: var(--background-button);
+  max-width: var(--max-width);
+  margin-inline: auto;
 }
 
 .content {

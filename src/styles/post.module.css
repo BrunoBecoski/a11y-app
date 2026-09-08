@@ -88,26 +88,37 @@
 .content {
   padding-inline: var(--padding-inline);
   width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: 768px;
+  margin-left: 2rem;
+}
+
+.content div {
+  margin-block: 1rem;
 }
 
 .content h2 {
   font-size: var(--text-xl);
   color: var(--color-paragraph);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .content h3 {
   color: var(--color-paragraph);
   scroll-behavior: smooth;
+
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .content h4 {
   color: var(--color-paragraph);
+  margin-block: 1rem;
 }
 
 .content h5 {
   color: var(--color-paragraph);
+  margin-block: 1rem;
 }
 
 .content p,
@@ -119,7 +130,14 @@
 }
 
 .content li {
-  margin-left: 1rem;
+  margin-left: 2rem;
+  margin-block: 0.5rem;
+}
+
+.content ol ul li,
+.content ul ul li {
+  list-style: disc;
+  margin-left: 3rem;
 }
 
 .content blockquote {
@@ -135,6 +153,7 @@
   background-color: var(--background-code);
   border: 1px solid var(--primary);
   border-radius: var(--radius-sm);
+  margin: 1rem;
 }
 
 .content code {
