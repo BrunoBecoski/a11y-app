@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "../styles/post.module.css";
 
 export function Post() {
-  const [activeSction, setActiveSection] = useState("acessibilidade");
+  const [activeSection, setActiveSection] = useState("acessibilidade");
 
   const sectionsRef = useRef(new Map());
 
