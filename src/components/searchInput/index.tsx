@@ -2,8 +2,12 @@ import { useRef, useState } from "react";
 
 import styles from "./searchInput.module.css";
 
-export function SearchInput() {
-  const [value, setValue] = useState("");
+interface SearchInputProps {
+  search: string;
+  setSearch: (search: string) => void;
+}
+
+export function SearchInput({ search, setSearch }: SearchInputProps) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   return (
@@ -12,13 +16,13 @@ export function SearchInput() {
         ref={inputRef}
         placeholder="Palavra-chave..."
         className={styles.input}
-        value={value}
-        onChange={(event) => setValue(event.target.value)}
+        value={search}
+        onChange={(event) => setSearch(event.target.value)}
       />
       <button
         type="button"
         className={styles.button}
-        onClick={() => setValue("")}
+        onClick={() => setSearch("")}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

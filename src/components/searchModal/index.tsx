@@ -1,3 +1,4 @@
+import { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 
 import { SearchButton } from "@/components/searchButton";
@@ -5,6 +6,11 @@ import { SearchInput } from "@/components/searchInput";
 import styles from "./searchModal.module.css";
 
 export function SearchModal() {
+  const [search, setSearch] = useState("");
+
+  function handleSearchTag(tag: string) {
+    setSearch(tag.replaceAll("-", " "));
+  }
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
@@ -41,23 +47,48 @@ export function SearchModal() {
               Uma galáxia de conteúdos para te ajudar.
             </Dialog.Description>
 
-            <SearchInput />
+            <SearchInput search={search} setSearch={setSearch} />
 
             <div className={styles.categories}>
               <h3>Categorias</h3>
 
               <div>
-                <a href="/acessibilidade">Acessibilidade</a>
-                <a href="/acessibilidade-na-web">Acessibilidade na Web</a>
-                <a href="/como-tornar-sites-acessiveis">
+                <button
+                  type="button"
+                  onClick={() => handleSearchTag("acessibilidade")}
+                >
+                  Acessibilidade
+                </button>
+                <button
+                  type="button"
+                  onClick={() => handleSearchTag("acessibilidade-na-web")}
+                >
+                  Acessibilidade na Web
+                </button>
+                <button
+                  type="button"
+                  onClick={() =>
+                    handleSearchTag("como-tornar-sites-acessiveis")
+                  }
+                >
                   Como tornar sites acessíveis
-                </a>
-                <a href="/boas-praticas-de-acessibilidade">
+                </button>
+                <button
+                  type="button"
+                  onClick={() =>
+                    handleSearchTag("boas-praticas-de-acessibilidade")
+                  }
+                >
                   Boas práticas de acessibilidade
-                </a>
-                <a href="/desenvolvimento-web-acessivel">
+                </button>
+                <button
+                  type="button"
+                  onClick={() =>
+                    handleSearchTag("desenvolvimento-web-acessivel")
+                  }
+                >
                   Desenvolvimento web acessível
-                </a>
+                </button>
               </div>
             </div>
           </div>
