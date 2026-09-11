@@ -17,6 +17,10 @@ export function Post() {
   }
 
   useEffect(() => {
+    console.log(activeSection);
+  }, [activeSection]);
+
+  useEffect(() => {
     const sectionsMap = Array.from(sectionsRef.current.values());
 
     const options = {
@@ -201,15 +205,14 @@ export function Post() {
           </div>
 
           <div
+            id="por-que-a-acessibilidade"
             ref={(node) =>
               node
                 ? sectionsRef.current.set("por-que-a-acessibilidade", node)
                 : sectionsRef.current.delete("por-que-a-acessibilidade")
             }
           >
-            <h2 id="por-que-a-acessibilidade">
-              Por que a acessibilidade na web é importante?
-            </h2>
+            <h2>Por que a acessibilidade na web é importante?</h2>
 
             <p>
               Imagine um cenário onde uma pessoa com deficiência visual não
@@ -226,13 +229,14 @@ export function Post() {
           </div>
 
           <div
+            id="quem-se-beneficia"
             ref={(node) =>
               node
                 ? sectionsRef.current.set("quem-se-beneficia", node)
                 : sectionsRef.current.delete("quem-se-beneficia")
             }
           >
-            <h2 id="quem-se-beneficia">Quem se beneficia da acessibilidade?</h2>
+            <h2>Quem se beneficia da acessibilidade?</h2>
             <ul>
               <li>
                 <strong>Deficiência visual</strong>: usuários com cegueira,
@@ -261,13 +265,14 @@ export function Post() {
           </div>
 
           <div
+            id="acessibilidade-na-pratica"
             ref={(node) =>
               node
                 ? sectionsRef.current.set("acessibilidade-na-pratica", node)
                 : sectionsRef.current.delete("acessibilidade-na-pratica")
             }
           >
-            <h2 id="acessibilidade-na-pratica">
+            <h2>
               Acessibilidade na prática: impacto real no ecossistema de
               programação
             </h2>
@@ -316,13 +321,14 @@ export function Post() {
           <h2>Princípios básicos de acessibilidade (WCAG)</h2>
 
           <div
+            id="1-perceptivel"
             ref={(node) =>
               node
                 ? sectionsRef.current.set("1-perceptivel", node)
                 : sectionsRef.current.delete("1-perceptivel")
             }
           >
-            <h3 id="1-perceptivel">1. Perceptível</h3>
+            <h3>1. Perceptível</h3>
             <ul>
               <li>
                 O conteúdo deve ser apresentado de forma clara, permitindo que
@@ -476,13 +482,14 @@ body {
           </div>
 
           <div
+            id="2-operavel"
             ref={(node) =>
               node
                 ? sectionsRef.current.set("2-operavel", node)
                 : sectionsRef.current.delete("2-operavel")
             }
           >
-            <h3 id="2-operavel">2. Operável</h3>
+            <h3>2. Operável</h3>
             <p>O site deve ser funcional para diferentes meios de navegação.</p>
 
             <h4>2.1. Foco visível</h4>
@@ -608,13 +615,14 @@ button:focus {
           </div>
 
           <div
+            id="3-compreensivel"
             ref={(node) =>
               node
                 ? sectionsRef.current.set("3-compreensivel", node)
                 : sectionsRef.current.delete("3-compreensivel")
             }
           >
-            <h3 id="3-compreensivel">3. Compreensível</h3>
+            <h3>3. Compreensível</h3>
             <p>
               O conteúdo e a navegação devem ser previsíveis e de fácil
               entendimento.
@@ -658,13 +666,14 @@ button:focus {
           </div>
 
           <div
+            id="4-robusto"
             ref={(node) =>
               node
                 ? sectionsRef.current.set("4-robusto", node)
                 : sectionsRef.current.delete("4-robusto")
             }
           >
-            <h3 id="4-robusto">4. Robusto</h3>
+            <h3>4. Robusto</h3>
             <p>
               O site deve ser compatível com diversas tecnologias e navegadores.
             </p>
@@ -705,13 +714,14 @@ button:focus {
           </div>
 
           <div
+            id="ferramentas-uteis"
             ref={(node) =>
               node
                 ? sectionsRef.current.set("ferramentas-uteis", node)
                 : sectionsRef.current.delete("ferramentas-uteis")
             }
           >
-            <h3 id="ferramentas-uteis">Ferramentas úteis</h3>
+            <h3>Ferramentas úteis</h3>
 
             <ul>
               <li>
@@ -749,13 +759,14 @@ button:focus {
           </div>
 
           <div
+            id="conclusao"
             ref={(node) =>
               node
                 ? sectionsRef.current.set("conclusao", node)
                 : sectionsRef.current.delete("conclusao")
             }
           >
-            <h3 id="conclusao">Conclusão</h3>
+            <h3>Conclusão</h3>
 
             <p>
               Promover acessibilidade na web é um passo essencial para criar
