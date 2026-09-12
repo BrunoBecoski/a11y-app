@@ -4,9 +4,9 @@ import Image from "next/image";
 import styles from "../styles/post.module.css";
 
 export function Post() {
-  const [activeSection, setActiveSection] = useState("acessibilidade");
+  const [activeSection, setActiveSection] = useState<string>("acessibilidade");
 
-  const sectionsRef = useRef(new Map());
+  const sectionsRef = useRef<Map<string, HTMLDivElement>>(new Map());
 
   function handleNavigateTo(id: string) {
     const element = sectionsRef.current.get(id);
@@ -25,13 +25,13 @@ export function Post() {
 
     const options = {
       root: null,
-      rootMargin: "-20px 0px -60px 0px",
+      rootMargin: "-30% 0px -60% 0px",
       threshold: 0,
     };
 
-    const callback = (entries) => {
+    const callback: IntersectionObserverCallback = (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersectiong) {
+        if (entry.isIntersecting && entry.target.id) {
           setActiveSection(entry.target.id);
         }
       });
@@ -206,11 +206,13 @@ export function Post() {
 
           <div
             id="por-que-a-acessibilidade"
-            ref={(node) =>
-              node
-                ? sectionsRef.current.set("por-que-a-acessibilidade", node)
-                : sectionsRef.current.delete("por-que-a-acessibilidade")
-            }
+            ref={(node) => {
+              if (node) {
+                sectionsRef.current.set("por-que-a-acessibilidade", node);
+              } else {
+                sectionsRef.current.delete("por-que-a-acessibilidade");
+              }
+            }}
           >
             <h2>Por que a acessibilidade na web é importante?</h2>
 
@@ -230,11 +232,13 @@ export function Post() {
 
           <div
             id="quem-se-beneficia"
-            ref={(node) =>
-              node
-                ? sectionsRef.current.set("quem-se-beneficia", node)
-                : sectionsRef.current.delete("quem-se-beneficia")
-            }
+            ref={(node) => {
+              if (node) {
+                sectionsRef.current.set("quem-se-beneficia", node);
+              } else {
+                sectionsRef.current.delete("quem-se-beneficia");
+              }
+            }}
           >
             <h2>Quem se beneficia da acessibilidade?</h2>
             <ul>
@@ -266,11 +270,13 @@ export function Post() {
 
           <div
             id="acessibilidade-na-pratica"
-            ref={(node) =>
-              node
-                ? sectionsRef.current.set("acessibilidade-na-pratica", node)
-                : sectionsRef.current.delete("acessibilidade-na-pratica")
-            }
+            ref={(node) => {
+              if (node) {
+                sectionsRef.current.set("acessibilidade-na-pratica", node);
+              } else {
+                sectionsRef.current.delete("acessibilidade-na-pratica");
+              }
+            }}
           >
             <h2>
               Acessibilidade na prática: impacto real no ecossistema de
@@ -322,11 +328,13 @@ export function Post() {
 
           <div
             id="1-perceptivel"
-            ref={(node) =>
-              node
-                ? sectionsRef.current.set("1-perceptivel", node)
-                : sectionsRef.current.delete("1-perceptivel")
-            }
+            ref={(node) => {
+              if (node) {
+                sectionsRef.current.set("1-perceptivel", node);
+              } else {
+                sectionsRef.current.delete("1-perceptivel");
+              }
+            }}
           >
             <h3>1. Perceptível</h3>
             <ul>
@@ -483,11 +491,13 @@ body {
 
           <div
             id="2-operavel"
-            ref={(node) =>
-              node
-                ? sectionsRef.current.set("2-operavel", node)
-                : sectionsRef.current.delete("2-operavel")
-            }
+            ref={(node) => {
+              if (node) {
+                sectionsRef.current.set("2-operavel", node);
+              } else {
+                sectionsRef.current.delete("2-operavel");
+              }
+            }}
           >
             <h3>2. Operável</h3>
             <p>O site deve ser funcional para diferentes meios de navegação.</p>
@@ -616,11 +626,13 @@ button:focus {
 
           <div
             id="3-compreensivel"
-            ref={(node) =>
-              node
-                ? sectionsRef.current.set("3-compreensivel", node)
-                : sectionsRef.current.delete("3-compreensivel")
-            }
+            ref={(node) => {
+              if (node) {
+                sectionsRef.current.set("3-compreensivel", node);
+              } else {
+                sectionsRef.current.delete("3-compreensivel");
+              }
+            }}
           >
             <h3>3. Compreensível</h3>
             <p>
@@ -667,11 +679,13 @@ button:focus {
 
           <div
             id="4-robusto"
-            ref={(node) =>
-              node
-                ? sectionsRef.current.set("4-robusto", node)
-                : sectionsRef.current.delete("4-robusto")
-            }
+            ref={(node) => {
+              if (node) {
+                sectionsRef.current.set("4-robusto", node);
+              } else {
+                sectionsRef.current.delete("4-robusto");
+              }
+            }}
           >
             <h3>4. Robusto</h3>
             <p>
@@ -715,11 +729,13 @@ button:focus {
 
           <div
             id="ferramentas-uteis"
-            ref={(node) =>
-              node
-                ? sectionsRef.current.set("ferramentas-uteis", node)
-                : sectionsRef.current.delete("ferramentas-uteis")
-            }
+            ref={(node) => {
+              if (node) {
+                sectionsRef.current.set("ferramentas-uteis", node);
+              } else {
+                sectionsRef.current.delete("ferramentas-uteis");
+              }
+            }}
           >
             <h3>Ferramentas úteis</h3>
 
@@ -760,11 +776,13 @@ button:focus {
 
           <div
             id="conclusao"
-            ref={(node) =>
-              node
-                ? sectionsRef.current.set("conclusao", node)
-                : sectionsRef.current.delete("conclusao")
-            }
+            ref={(node) => {
+              if (node) {
+                sectionsRef.current.set("conclusao", node);
+              } else {
+                sectionsRef.current.delete("conclusao");
+              }
+            }}
           >
             <h3>Conclusão</h3>
 
