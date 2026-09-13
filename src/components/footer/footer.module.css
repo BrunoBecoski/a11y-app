@@ -18,7 +18,8 @@
   margin-inline: auto;
   max-width: var(--max-width);
   display: flex;
-  align-items: center;
+  align-items: end;
+  padding-bottom: 2rem;
   justify-content: space-between;
   height: 100%;
 }

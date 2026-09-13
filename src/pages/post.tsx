@@ -101,6 +101,7 @@ export function Post() {
           <ul className={styles.list}>
             <li>
               <button
+                data-hover={activeSection === "por-que-a-acessibilidade"}
                 type="button"
                 onClick={() => handleNavigateTo("por-que-a-acessibilidade")}
               >
@@ -112,6 +113,7 @@ export function Post() {
             </li>
             <li>
               <button
+                data-hover={activeSection === "quem-se-beneficia"}
                 type="button"
                 onClick={() => handleNavigateTo("quem-se-beneficia")}
               >
@@ -123,6 +125,7 @@ export function Post() {
             </li>
             <li>
               <button
+                data-hover={activeSection === "acessibilidade-na-pratica"}
                 type="button"
                 onClick={() => handleNavigateTo("acessibilidade-na-pratica")}
               >
@@ -135,6 +138,7 @@ export function Post() {
             </li>
             <li>
               <button
+                data-hover={activeSection === "1-perceptivel"}
                 type="button"
                 onClick={() => handleNavigateTo("1-perceptivel")}
               >
@@ -144,6 +148,7 @@ export function Post() {
             </li>
             <li>
               <button
+                data-hover={activeSection === "2-operavel"}
                 type="button"
                 onClick={() => handleNavigateTo("2-operavel")}
               >
@@ -153,6 +158,7 @@ export function Post() {
             </li>
             <li>
               <button
+                data-hover={activeSection === "3-compreensivel"}
                 type="button"
                 onClick={() => handleNavigateTo("3-compreensivel")}
               >
@@ -162,6 +168,7 @@ export function Post() {
             </li>
             <li>
               <button
+                data-hover={activeSection === "4-robusto"}
                 type="button"
                 onClick={() => handleNavigateTo("4-robusto")}
               >
@@ -171,6 +178,7 @@ export function Post() {
             </li>
             <li>
               <button
+                data-hover={activeSection === "ferramentas-uteis"}
                 type="button"
                 onClick={() => handleNavigateTo("ferramentas-uteis")}
               >
@@ -180,6 +188,7 @@ export function Post() {
             </li>
             <li>
               <button
+                data-hover={activeSection === "conclusao"}
                 type="button"
                 onClick={() => handleNavigateTo("conclusao")}
               >
