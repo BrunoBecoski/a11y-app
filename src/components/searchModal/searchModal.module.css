@@ -88,3 +88,28 @@
 .categories button:hover {
   filter: brightness(var(--brightness));
 }
+
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.result span {
+  font-size: var(--text-sm);
+  color: var(--color-label);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.result a {
+  font-size: var(--text-lg);
+  color: var(--color-title);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.result a:hover {
+  text-decoration: underline;
+}

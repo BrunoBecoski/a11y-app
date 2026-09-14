@@ -11,6 +11,7 @@ export function SearchModal() {
   function handleSearchTag(tag: string) {
     setSearch(tag.replaceAll("-", " "));
   }
+
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
@@ -49,48 +50,58 @@ export function SearchModal() {
 
             <SearchInput search={search} setSearch={setSearch} />
 
-            <div className={styles.categories}>
-              <h3>Categorias</h3>
+            {search ? (
+              <div className={styles.result}>
+                <span>Acessibilidade</span>
 
-              <div>
-                <button
-                  type="button"
-                  onClick={() => handleSearchTag("acessibilidade")}
-                >
-                  Acessibilidade
-                </button>
-                <button
-                  type="button"
-                  onClick={() => handleSearchTag("acessibilidade-na-web")}
-                >
-                  Acessibilidade na Web
-                </button>
-                <button
-                  type="button"
-                  onClick={() =>
-                    handleSearchTag("como-tornar-sites-acessiveis")
-                  }
-                >
-                  Como tornar sites acessíveis
-                </button>
-                <button
-                  type="button"
-                  onClick={() =>
-                    handleSearchTag("boas-praticas-de-acessibilidade")
-                  }
-                >
-                  Boas práticas de acessibilidade
-                </button>
-                <button
-                  type="button"
-                  onClick={() =>
-                    handleSearchTag("desenvolvimento-web-acessivel")
-                  }
-                >
-                  Desenvolvimento web acessível
-                </button>
+                <a href="/crie-experiencias-inclusivas-guia-de-acessibilidade-na-web">
+                  Crie experiências inclusivas: guia de acessibilidade na web
+                </a>
               </div>
-            </div>
+            ) : (
+              <div className={styles.categories}>
+                <h3>Categorias</h3>
+
+                <div>
+                  <button
+                    type="button"
+                    onClick={() => handleSearchTag("acessibilidade")}
+                  >
+                    Acessibilidade
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleSearchTag("acessibilidade-na-web")}
+                  >
+                    Acessibilidade na Web
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      handleSearchTag("como-tornar-sites-acessiveis")
+                    }
+                  >
+                    Como tornar sites acessíveis
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      handleSearchTag("boas-praticas-de-acessibilidade")
+                    }
+                  >
+                    Boas práticas de acessibilidade
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      handleSearchTag("desenvolvimento-web-acessivel")
+                    }
+                  >
+                    Desenvolvimento web acessível
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </Dialog.Content>
       </Dialog.Portal>
