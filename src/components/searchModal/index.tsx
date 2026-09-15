@@ -54,7 +54,7 @@ export function SearchModal() {
               <div className={styles.result}>
                 <span>Acessibilidade</span>
 
-                <a href="/crie-experiencias-inclusivas-guia-de-acessibilidade-na-web">
+                <a href="/">
                   Crie experiências inclusivas: guia de acessibilidade na web
                 </a>
               </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "../styles/post.module.css";
 
 export function Post() {
-  const [activeSection, setActiveSection] = useState<string>("acessibilidade");
+  const [activeSection, setActiveSection] = useState<string>("");
 
   const sectionsRef = useRef<Map<string, HTMLDivElement>>(new Map());
 
@@ -17,7 +17,7 @@ export function Post() {
   }
 
   useEffect(() => {
-    console.log(activeSection);
+    window.location.hash = activeSection;
   }, [activeSection]);
 
   useEffect(() => {
