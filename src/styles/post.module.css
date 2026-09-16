@@ -107,6 +107,7 @@
 .content h3 {
   color: var(--color-paragraph);
   scroll-behavior: smooth;
+  font-size: var(--text-xl);
 
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -115,6 +116,7 @@
 .content h4 {
   color: var(--color-paragraph);
   margin-block: 1rem;
+  font-size: var(--text-lg);
 }
 
 .content h5 {
@@ -242,5 +244,6 @@
 @media (max-width: 768px) {
   .nav {
     display: none;
+    background-color: red;
   }
 }

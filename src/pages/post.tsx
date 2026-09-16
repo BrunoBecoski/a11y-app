@@ -801,6 +801,8 @@ button:focus {
               você não apenas melhora seu trabalho como desenvolvedor, mas
               também ajuda a tornar a internet um lugar melhor para todos.
             </p>
+
+            <span>💜</span>
           </div>
         </div>
       </article>
