@@ -67,7 +67,7 @@
   font-weight: 700;
   font-size: var(--text-xs);
   text-transform: uppercase;
-  color: var(--color-label);
+  color: var(--color-paragraph);
   background-color: var(--background-button);
   padding-inline: 0.5rem;
   padding-block: 0.25rem;
@@ -170,6 +170,7 @@
 .nav {
   width: 280px;
   height: calc(100vh - var(--header-height) - 2rem);
+  max-height: 500px;
   border-radius: var(--radius-lg);
   border: 0.0625rem solid var(--background-button);
   padding: 1.25rem;
@@ -187,7 +188,7 @@
 
 .nav button {
   background-color: transparent;
-  color: var(--color-paragraph);
+  color: var(--color-title);
   font-size: var(--text-sm);
   display: flex;
   text-align: start;
@@ -195,10 +196,13 @@
   padding: 0.5rem;
   width: 100%;
   border-radius: var(--radius-sm);
+
+  border: 4px solid transparent;
 }
 
 .nav button[data-hover="true"] {
-  background-color: var(--primary);
+  border-color: var(--primary);
+  background-color: var(--background-header);
 }
 
 .nav button:hover {
@@ -244,6 +248,5 @@
 @media (max-width: 768px) {
   .nav {
     display: none;
-    background-color: red;
   }
 }

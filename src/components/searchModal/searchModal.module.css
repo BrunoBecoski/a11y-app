@@ -76,7 +76,7 @@
   font-weight: 700;
   font-size: var(--text-sm);
   text-transform: uppercase;
-  color: var(--color-label);
+  color: var(--color-paragraph);
   background-color: var(--background-button);
   padding-inline: 1rem;
   padding-block: 0.5rem;

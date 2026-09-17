@@ -19,7 +19,7 @@
 .label {
   background: transparent;
   font-size: var(--text-sm);
-  color: var(--color-label);
+  color: var(--color-title);
 }
 
 .container:hover {
