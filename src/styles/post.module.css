@@ -137,8 +137,8 @@
   margin-block: 0.5rem;
 }
 
-.content ol ul li,
-.content ul ul li {
+.content ol li ul li,
+.content ul li ul li {
   list-style: disc;
   margin-left: 3rem;
 }
@@ -165,6 +165,11 @@
 
 .content ol {
   color: var(--color-paragraph);
+}
+
+.content iframe {
+  aspect-ratio: 16 / 9;
+  padding: 1rem;
 }
 
 .nav {

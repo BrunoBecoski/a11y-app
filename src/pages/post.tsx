@@ -111,6 +111,7 @@ export function Post() {
                 </span>
               </button>
             </li>
+
             <li>
               <button
                 data-hover={activeSection === "quem-se-beneficia"}
@@ -123,6 +124,7 @@ export function Post() {
                 </span>
               </button>
             </li>
+
             <li>
               <button
                 data-hover={activeSection === "acessibilidade-na-pratica"}
@@ -136,6 +138,7 @@ export function Post() {
                 </span>
               </button>
             </li>
+
             <li>
               <button
                 data-hover={activeSection === "1-perceptivel"}
@@ -146,6 +149,7 @@ export function Post() {
                 <span className={styles.label}>1. Perceptível</span>
               </button>
             </li>
+
             <li>
               <button
                 data-hover={activeSection === "2-operavel"}
@@ -156,6 +160,7 @@ export function Post() {
                 <span className={styles.label}>2. Operável</span>
               </button>
             </li>
+
             <li>
               <button
                 data-hover={activeSection === "3-compreensivel"}
@@ -166,6 +171,7 @@ export function Post() {
                 <span className={styles.label}>3. Compreensível</span>
               </button>
             </li>
+
             <li>
               <button
                 data-hover={activeSection === "4-robusto"}
@@ -176,6 +182,7 @@ export function Post() {
                 <span className={styles.label}>4. Robusto</span>
               </button>
             </li>
+
             <li>
               <button
                 data-hover={activeSection === "ferramentas-uteis"}
@@ -186,6 +193,7 @@ export function Post() {
                 <span className={styles.label}>Ferramentas úteis</span>
               </button>
             </li>
+
             <li>
               <button
                 data-hover={activeSection === "conclusao"}
@@ -255,15 +263,18 @@ export function Post() {
                 <strong>Deficiência visual</strong>: usuários com cegueira,
                 baixa visão ou daltonismo.
               </li>
+
               <li>
                 <strong>Deficiência auditiva</strong>: pessoas com dificuldades
                 auditivas ou surdez.
               </li>
+
               <li>
                 <strong>Deficiência motora</strong>: aqueles que utilizam
                 tecnologias assistivas para navegação, como switches ou teclados
                 adaptados.
               </li>
+
               <li>
                 <strong>Deficiência cognitiva</strong>: usuários com dislexia,
                 déficit de atenção ou dificuldades de compreensão.
@@ -308,10 +319,12 @@ export function Post() {
                   O impacto da acessibilidade na vida de pessoas com
                   deficiência.
                 </li>
+
                 <li>
                   Como ferramentas e boas práticas ajudam no desenvolvimento de
                   aplicações acessíveis.
                 </li>
+
                 <li>
                   A importância de pensar na acessibilidade desde o início de
                   qualquer projeto.
@@ -380,6 +393,7 @@ export function Post() {
               <li>
                 Inclua narrações que descrevam o contexto visual de vídeos.
               </li>
+
               <li>Use ferramentas para criar audiodescrições.</li>
             </ul>
 
@@ -402,45 +416,59 @@ body {
             <h4>1.4. Design responsivo e zoom</h4>
             <ol>
               <li>Layout fluido:</li>
-              <ul>
-                <li>
-                  Evitar uso de larguras fixas em pixels para o layout
-                  principal. Prefira unidades relativas (%, rem, em) para que o
-                  conteúdo se adapte ao zoom.
-                </li>
-                <li>
-                  Para entender na prática a importância de unidades relativas
-                  (rem) e espaçamentos fluídos em um footer, confira o vídeo
-                  abaixo:
-                </li>
 
-                <iframe
-                  src="https://www.youtube.com/embed/dAdXLOAg4TM"
-                  title="Responsividade e acessibilidade com Tailwind"
-                  allowFullScreen
-                ></iframe>
-              </ul>
+              <li>
+                <ul>
+                  <li>
+                    Evitar uso de larguras fixas em pixels para o layout
+                    principal. Prefira unidades relativas (%, rem, em) para que
+                    o conteúdo se adapte ao zoom.
+                  </li>
+
+                  <li>
+                    Para entender na prática a importância de unidades relativas
+                    (rem) e espaçamentos fluídos em um footer, confira o vídeo
+                    abaixo:
+                  </li>
+
+                  <li>
+                    <iframe
+                      src="https://www.youtube.com/embed/dAdXLOAg4TM"
+                      title="Responsividade e acessibilidade com Tailwind"
+                      allowFullScreen
+                    ></iframe>
+                  </li>
+                </ul>
+              </li>
 
               <li>Teste de zoom (200% ou mais):</li>
-              <ul>
-                <li>
-                  Certificar-se de que, ao aplicar zoom, o layout não exige
-                  rolagem horizontal contínua e que os elementos não fiquem
-                  sobrepostos.
-                </li>
-              </ul>
+
+              <li>
+                <ul>
+                  <li>
+                    Certificar-se de que, ao aplicar zoom, o layout não exige
+                    rolagem horizontal contínua e que os elementos não fiquem
+                    sobrepostos.
+                  </li>
+                </ul>
+              </li>
+
               <li>Manter boa legibilidade:</li>
-              <ul>
-                <li>
-                  Fontes devem ter tamanho mínimo recomendado (ex.: 16px padrão)
-                  e permitir fácil escala com zoom.
-                </li>
-                <li>
-                  Contraste e espaçamento devem ser pensados para que o conteúdo
-                  continue legível mesmo em telas pequenas ou com zoom
-                  aumentado.
-                </li>
-              </ul>
+
+              <li>
+                <ul>
+                  <li>
+                    Fontes devem ter tamanho mínimo recomendado (ex.: 16px
+                    padrão) e permitir fácil escala com zoom.
+                  </li>
+
+                  <li>
+                    Contraste e espaçamento devem ser pensados para que o
+                    conteúdo continue legível mesmo em telas pequenas ou com
+                    zoom aumentado.
+                  </li>
+                </ul>
+              </li>
             </ol>
 
             <h5>Exemplo rápido de CSS</h5>
@@ -556,6 +584,7 @@ button:focus {
                 Permita que usuários ajustem ou estendam o tempo para completar
                 ações importantes.
               </li>
+
               <li>
                 Se o site tiver formulários longos ou etapas de compra, garanta
                 que seja possível retomar a sessão ou revalidar dados sem perder
@@ -577,6 +606,7 @@ button:focus {
                 possibilita aplicar estilo para que fique visível apenas ao
                 receber foco (para não atrapalhar o layout).
               </li>
+
               <li>
                 Identifique o conteúdo principal:
                 <pre>
@@ -588,6 +618,9 @@ button:focus {
                     `}
                   </code>
                 </pre>
+              </li>
+
+              <li>
                 <ul>
                   <li>
                     Garanta que o id no main seja o mesmo especificado no href
@@ -597,9 +630,11 @@ button:focus {
               </li>
 
               <li>Estilize corretamente (opcional, mas recomendado):</li>
-              <pre>
-                <code>
-                  {`
+
+              <li>
+                <pre>
+                  <code>
+                    {`
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -620,16 +655,19 @@ button:focus {
   z-index: 1000;
 }
                   `}
-                </code>
-              </pre>
+                  </code>
+                </pre>
+              </li>
 
-              <ul>
-                <li>
-                  Isso fará com que o link apareça somente quando focado,
-                  mantendo o design limpo, mas oferecendo acessibilidade para
-                  usuários que navegam via teclado ou leitor de tela.
-                </li>
-              </ul>
+              <li>
+                <ul>
+                  <li>
+                    Isso fará com que o link apareça somente quando focado,
+                    mantendo o design limpo, mas oferecendo acessibilidade para
+                    usuários que navegam via teclado ou leitor de tela.
+                  </li>
+                </ul>
+              </li>
             </ul>
           </div>
 
