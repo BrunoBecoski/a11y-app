@@ -260,24 +260,23 @@ export function Post() {
             <h2>Quem se beneficia da acessibilidade?</h2>
             <ul>
               <li>
-                <strong>Deficiência visual</strong>: usuários com cegueira,
-                baixa visão ou daltonismo.
+                <b>Deficiência visual</b>: usuários com cegueira, baixa visão ou
+                daltonismo.
               </li>
 
               <li>
-                <strong>Deficiência auditiva</strong>: pessoas com dificuldades
-                auditivas ou surdez.
+                <b>Deficiência auditiva</b>: pessoas com dificuldades auditivas
+                ou surdez.
               </li>
 
               <li>
-                <strong>Deficiência motora</strong>: aqueles que utilizam
-                tecnologias assistivas para navegação, como switches ou teclados
-                adaptados.
+                <b>Deficiência motora</b>: aqueles que utilizam tecnologias
+                assistivas para navegação, como switches ou teclados adaptados.
               </li>
 
               <li>
-                <strong>Deficiência cognitiva</strong>: usuários com dislexia,
-                déficit de atenção ou dificuldades de compreensão.
+                <b>Deficiência cognitiva</b>: usuários com dislexia, déficit de
+                atenção ou dificuldades de compreensão.
               </li>
             </ul>
 
@@ -307,8 +306,8 @@ export function Post() {
               A acessibilidade vai muito além de boas práticas de código; ela
               transforma vidas e torna o ambiente digital mais inclusivo. Para
               ilustrar isso, recomendamos que você assista ao vídeo{" "}
-              <strong>"Acessibilidade no ecossistema de programação"</strong>,
-              onde Alexandre Costa e Camila Marinho compartilham experiências,
+              <b>"Acessibilidade no ecossistema de programação"</b>, onde
+              Alexandre Costa e Camila Marinho compartilham experiências,
               desafios e dicas sobre a construção de aplicações acessíveis.
             </p>
 
@@ -332,21 +331,28 @@ export function Post() {
               </ul>
             </blockquote>
 
+            <iframe
+              src="https://www.youtube.com/embed/B_jepC7Eufo"
+              title="Acessibilidade no ecossistema de programação | Faladev #44"
+              allowFullScreen
+            ></iframe>
+
             <p>
               Não deixe de conferir e colocar em prática as dicas apresentadas
               por profissionais que vivenciam essas questões diariamente. Para
               saber mais, continue explorando nosso conteúdo e veja como você
               pode contribuir para um ecossistema mais inclusivo!
             </p>
-
-            <iframe
-              src="https://www.youtube.com/embed/B_jepC7Eufo"
-              title="Acessibilidade no ecossistema de programação | Faladev #44"
-              allowFullScreen
-            ></iframe>
           </div>
 
           <h2>Princípios básicos de acessibilidade (WCAG)</h2>
+
+          <p>
+            A <b> Web Content Accessibility Guidelines (WCAG)</b> é a base para
+            construir experiências acessíveis. Vamos detalhar os quatro
+            princípios fundamentais, com seções menores para facilitar a
+            leitura.
+          </p>
 
           <div
             id="1-perceptivel"
@@ -382,8 +388,13 @@ export function Post() {
             </pre>
             <ul>
               <li>
-                Para imagens decorativas, use <code>alt=""</code> para que
-                leitores de tela as ignorem.
+                Para imagens decorativas, use
+                <span>
+                  <pre>
+                    <code>alt=""</code>
+                  </pre>
+                </span>
+                para que leitores de tela as ignorem.
               </li>
             </ul>
 
@@ -400,7 +411,14 @@ export function Post() {
             <h4>1.3. Cores e contraste</h4>
             <p>
               Adote cores que atendam aos critérios de contraste (mínimo de
-              4.5:1). Ferramentas como o Contrast Checker ajudam a validar
+              4.5:1). Ferramentas como o{" "}
+              <a
+                href="https://webaim.org/resources/contrastchecker/"
+                target="_blank"
+              >
+                Contrast Checker
+              </a>{" "}
+              ajudam a validar
             </p>
             <pre>
               <code>
@@ -415,19 +433,39 @@ body {
 
             <h4>1.4. Design responsivo e zoom</h4>
             <ol>
-              <li>Layout fluido:</li>
+              <li>
+                1.
+                <b> Layout fluido:</b>
+              </li>
 
               <li>
                 <ul>
                   <li>
                     Evitar uso de larguras fixas em pixels para o layout
-                    principal. Prefira unidades relativas (%, rem, em) para que
-                    o conteúdo se adapte ao zoom.
+                    principal. Prefira unidades relativas (%,
+                    <span>
+                      <pre>
+                        <code>rem</code>
+                      </pre>
+                    </span>
+                    ,
+                    <span>
+                      <pre>
+                        <code>em</code>
+                      </pre>
+                    </span>
+                    ) para que o conteúdo se adapte ao zoom.
                   </li>
 
                   <li>
                     Para entender na prática a importância de unidades relativas
-                    (rem) e espaçamentos fluídos em um footer, confira o vídeo
+                    (
+                    <span>
+                      <pre>
+                        <code>rem</code>
+                      </pre>
+                    </span>
+                    ) e espaçamentos fluídos em um footer, confira o vídeo
                     abaixo:
                   </li>
 
@@ -441,7 +479,10 @@ body {
                 </ul>
               </li>
 
-              <li>Teste de zoom (200% ou mais):</li>
+              <li>
+                2.
+                <b> Teste de zoom (200% ou mais):</b>
+              </li>
 
               <li>
                 <ul>
@@ -453,7 +494,9 @@ body {
                 </ul>
               </li>
 
-              <li>Manter boa legibilidade:</li>
+              <li>
+                3. <b> Manter boa legibilidade:</b>
+              </li>
 
               <li>
                 <ul>
@@ -471,7 +514,7 @@ body {
               </li>
             </ol>
 
-            <h5>Exemplo rápido de CSS</h5>
+            <h4>Exemplo rápido de CSS</h4>
             <pre>
               <code>
                 {`
@@ -496,8 +539,31 @@ body {
               Organizar o conteúdo com cabeçalhos hierárquicos é uma prática
               essencial para melhorar a experiência de navegação e garantir que
               leitores de tela interpretem corretamente a estrutura da página.
-              Use tags semânticas como {`<main>`},{`<section>`}, {`<header>`} e{" "}
-              {`<footer>`} para dar significado aos elementos do seu site.
+              Use tags semânticas como{" "}
+              <span>
+                <pre>
+                  <code>{`<main>`}</code>
+                </pre>
+              </span>
+              ,{" "}
+              <span>
+                <pre>
+                  <code>{`<section>`}</code>
+                </pre>
+              </span>
+              ,{" "}
+              <span>
+                <pre>
+                  <code>{`<header>`}</code>
+                </pre>
+              </span>{" "}
+              e{" "}
+              <span>
+                <pre>
+                  <code>{`<footer>`}</code>
+                </pre>
+              </span>{" "}
+              para dar significado aos elementos do seu site.
             </p>
             <p>Exemplo prático de organização hierárquica:</p>
 
@@ -505,24 +571,27 @@ body {
               <code>
                 {`
 <main>
-<h1>Cursos Rocketseat</h1>
-<section>
-<h2>Trilhas disponíveis</h2>
-<ul>
-<li>Ignite</li>
-<li>Explorer</li>
-</ul>
-</section>
+  <h1>Cursos Rocketseat</h1>
+  <section>
+    <h2>Trilhas disponíveis</h2>
+    <ul>
+      <li>Ignite</li>
+      <li>Explorer</li>
+    </ul>
+  </section>
 </main>
                 `}
               </code>
             </pre>
 
             <span>
-              📄 Para aprofundar seus conhecimentos sobre HTML Semântico e como
-              ele contribui para uma web mais acessível, recomendamos o artigo
-              HTML semântico: como criar uma web acessível no blog da
-              Rocketseat.
+              📄 Para aprofundar seus conhecimentos sobre <b>HTML Semântico</b>{" "}
+              e como ele contribui para uma web mais acessível, recomendamos o
+              artigo{" "}
+              <a href="https://www.rocketseat.com.br/blog/artigos/post/html-semantico-web-acessivel">
+                HTML semântico: como criar uma web acessível
+              </a>{" "}
+              no blog da Rocketseat.
             </span>
           </div>
 
@@ -602,9 +671,14 @@ button:focus {
             <h4>2.5. Link de pular para o conteúdo (Skip to Main Content)</h4>
             <ul>
               <li>
-                Essa âncora deve ter uma classe (por exemplo, .skip-link) que
-                possibilita aplicar estilo para que fique visível apenas ao
-                receber foco (para não atrapalhar o layout).
+                Essa âncora deve ter uma classe (por exemplo,
+                <span>
+                  <pre>
+                    <code>.skip-link</code>
+                  </pre>
+                </span>
+                ) que possibilita aplicar estilo para que fique visível apenas
+                ao receber foco (para não atrapalhar o layout).
               </li>
 
               <li>
@@ -623,13 +697,32 @@ button:focus {
               <li>
                 <ul>
                   <li>
-                    Garanta que o id no main seja o mesmo especificado no href
+                    Garanta que o
+                    <span>
+                      <pre>
+                        <code>id</code>
+                      </pre>
+                    </span>
+                    no{" "}
+                    <span>
+                      <pre>
+                        <code>main</code>
+                      </pre>
+                    </span>{" "}
+                    seja o mesmo especificado no{" "}
+                    <span>
+                      <pre>
+                        <code>href</code>
+                      </pre>
+                    </span>
                     do link de pulo.
                   </li>
                 </ul>
               </li>
 
-              <li>Estilize corretamente (opcional, mas recomendado):</li>
+              <li>
+                <b>Estilize corretamente</b> (opcional, mas recomendado):
+              </li>
 
               <li>
                 <pre>
@@ -749,9 +842,15 @@ button:focus {
             <h4>4.1.1 Exemplos práticos de ARIA</h4>
 
             <ul>
-              <li>Barra de navegação:</li>
-              <li>Botões e ícones (aria-label):</li>
-              <li>Alertas (role="alert"):</li>
+              <li>
+                <b>Barra de navegação:</b>
+              </li>
+              <li>
+                <b>Botões e ícones (aria-label):</b>
+              </li>
+              <li>
+                <b>Alertas (role="alert"):</b>
+              </li>
             </ul>
 
             <p>
@@ -770,7 +869,12 @@ button:focus {
 
             <h4>4.3. Validação de código</h4>
             <ul>
-              <li>Use ferramentas como o W3C Validator.</li>
+              <li>
+                Use ferramentas como o{" "}
+                <a href="https://validator.w3.org/" target="_blank">
+                  W3C Validator.
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -788,14 +892,31 @@ button:focus {
 
             <ul>
               <li>
-                <strong>Google Lighthouse</strong>: auditorias automáticas de
-                acessibilidade.
+                <b>
+                  <a
+                    href="https://developer.chrome.com/docs/lighthouse/overview?hl=pt-br"
+                    target="_blank"
+                  >
+                    Google Lighthouse
+                  </a>
+                </b>
+                : auditorias automáticas de acessibilidade.
               </li>
               <li>
-                <strong>WAVE</strong>: identificação de barreiras.
+                <b>
+                  <a href="https://wave.webaim.org/" target="_blank">
+                    WAVE
+                  </a>
+                </b>
+                : identificação de barreiras.
               </li>
               <li>
-                <strong>NVDA</strong>identificação de barreiras.
+                <b>
+                  <a href="https://www.nvaccess.org/download/" target="_blank">
+                    NVDA
+                  </a>
+                </b>
+                : identificação de barreiras.
               </li>
             </ul>
 
@@ -809,14 +930,14 @@ button:focus {
 
             <ul>
               <li>
-                Realizar <strong>testes exploratórios</strong>: convidar
-                usuários com deficiência visual ou motora para navegar pelo site
-                e fornecer feedback sobre dificuldades encontradas.
+                Realizar <b>testes exploratórios</b>: convidar usuários com
+                deficiência visual ou motora para navegar pelo site e fornecer
+                feedback sobre dificuldades encontradas.
               </li>
               <li>
-                <strong>Documentar</strong> as descobertas: criar relatórios que
-                apontem barreiras e oportunidades de melhoria, garantindo um
-                ciclo de desenvolvimento inclusivo.
+                <b>Documentar</b> as descobertas: criar relatórios que apontem
+                barreiras e oportunidades de melhoria, garantindo um ciclo de
+                desenvolvimento inclusivo.
               </li>
             </ul>
           </div>
