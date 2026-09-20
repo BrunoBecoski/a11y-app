@@ -390,9 +390,7 @@ export function Post() {
               <li>
                 Para imagens decorativas, use
                 <span>
-                  <pre>
-                    <code>alt=""</code>
-                  </pre>
+                  <code>alt=""</code>
                 </span>
                 para que leitores de tela as ignorem.
               </li>
@@ -444,15 +442,11 @@ body {
                     Evitar uso de larguras fixas em pixels para o layout
                     principal. Prefira unidades relativas (%,
                     <span>
-                      <pre>
-                        <code>rem</code>
-                      </pre>
+                      <code>rem</code>
                     </span>
                     ,
                     <span>
-                      <pre>
-                        <code>em</code>
-                      </pre>
+                      <code>em</code>
                     </span>
                     ) para que o conteúdo se adapte ao zoom.
                   </li>
@@ -461,9 +455,7 @@ body {
                     Para entender na prática a importância de unidades relativas
                     (
                     <span>
-                      <pre>
-                        <code>rem</code>
-                      </pre>
+                      <code>rem</code>
                     </span>
                     ) e espaçamentos fluídos em um footer, confira o vídeo
                     abaixo:
@@ -541,27 +533,19 @@ body {
               leitores de tela interpretem corretamente a estrutura da página.
               Use tags semânticas como{" "}
               <span>
-                <pre>
-                  <code>{`<main>`}</code>
-                </pre>
+                <code>{`<main>`}</code>
               </span>
               ,{" "}
               <span>
-                <pre>
-                  <code>{`<section>`}</code>
-                </pre>
+                <code>{`<section>`}</code>
               </span>
               ,{" "}
               <span>
-                <pre>
-                  <code>{`<header>`}</code>
-                </pre>
+                <code>{`<header>`}</code>
               </span>{" "}
               e{" "}
               <span>
-                <pre>
-                  <code>{`<footer>`}</code>
-                </pre>
+                <code>{`<footer>`}</code>
               </span>{" "}
               para dar significado aos elementos do seu site.
             </p>
@@ -673,9 +657,7 @@ button:focus {
               <li>
                 Essa âncora deve ter uma classe (por exemplo,
                 <span>
-                  <pre>
-                    <code>.skip-link</code>
-                  </pre>
+                  <code>.skip-link</code>
                 </span>
                 ) que possibilita aplicar estilo para que fique visível apenas
                 ao receber foco (para não atrapalhar o layout).
@@ -699,21 +681,15 @@ button:focus {
                   <li>
                     Garanta que o
                     <span>
-                      <pre>
-                        <code>id</code>
-                      </pre>
+                      <code>id</code>
                     </span>
                     no{" "}
                     <span>
-                      <pre>
-                        <code>main</code>
-                      </pre>
+                      <code>main</code>
                     </span>{" "}
                     seja o mesmo especificado no{" "}
                     <span>
-                      <pre>
-                        <code>href</code>
-                      </pre>
+                      <code>href</code>
                     </span>
                     do link de pulo.
                   </li>

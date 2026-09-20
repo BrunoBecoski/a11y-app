@@ -169,12 +169,13 @@
   font-size: var(--text-lg);
 }
 
-.content span pre {
-  color: var(--primary);
-  display: inline;
+.content span code {
+  background-color: var(--background-code);
+  color: var(--color-paragraph);
+
+  border-radius: var(--radius-sm);
+  padding: 0.25rem 0.5rem;
   margin-inline: 0.5rem;
-  padding-block: 0.5rem;
-  border: none;
 }
 
 .content a {
