@@ -91,7 +91,13 @@ export function Post() {
           </div>
         </div>
 
-        <Image src="/html-css.avif" alt="html-css" width={1120} height={502} />
+        <Image
+          className={styles.image}
+          src="/html-css.avif"
+          alt="html-css"
+          width={1120}
+          height={502}
+        />
       </div>
 
       <article className={styles.article}>
