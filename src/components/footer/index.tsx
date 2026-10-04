@@ -7,13 +7,8 @@ export function Footer() {
     window.scrollTo({
       top: 0,
     });
-
-    window.history.pushState(
-      "",
-      document.title,
-      window.location.pathname + window.location.search,
-    );
   }
+
   return (
     <footer aria-label="Rodapé" className={styles.container}>
       <div className={styles.line} />

@@ -17,7 +17,15 @@ export function Post() {
   }
 
   useEffect(() => {
-    window.location.hash = activeSection;
+    if (activeSection) {
+      window.history.replaceState(null, "", `#${activeSection}`);
+    } else {
+      window.history.replaceState(
+        null,
+        document.title,
+        window.location.pathname + window.location.search,
+      );
+    }
   }, [activeSection]);
 
   useEffect(() => {
@@ -30,6 +38,11 @@ export function Post() {
     };
 
     const callback: IntersectionObserverCallback = (entries) => {
+      if (window.scrollY < 200) {
+        setActiveSection("");
+        return;
+      }
+
       entries.forEach((entry) => {
         if (entry.isIntersecting && entry.target.id) {
           setActiveSection(entry.target.id);
@@ -45,7 +58,18 @@ export function Post() {
       }
     });
 
-    return () => observer.disconnect();
+    const handleScroll = () => {
+      if (window.scrollY < 200) {
+        setActiveSection("");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
